@@ -1,0 +1,169 @@
+{
+  "suggest.noselect": false,
+
+  // Explorer
+  "explorer.keyMappings.global": {
+    "i": false, // cancel default mapkey
+
+    "*": "toggleSelection",
+    "<tab>": "actionMenu",
+
+    "gk": ["wait", "expandablePrev"],
+    "gj": ["wait", "expandableNext"],
+    "h": ["wait", "collapse"],
+    "l": ["wait", "expandable?", "expand", "open"],
+    "J": ["wait", "toggleSelection", "normal:j"],
+    "K": ["wait", "toggleSelection", "normal:k"],
+    "gl": ["wait", "expand:recursive"],
+    "gh": ["wait", "collapse:recursive"],
+    "<2-LeftMouse>": [
+      "expandable?",
+      ["expanded?", "collapse", "expand"],
+      "open"
+    ],
+    "o": ["wait", "expanded?", "collapse", "expand"],
+    "<cr>": ["wait", "expandable?", "cd", "open"],
+    "e": "open",
+    "s": "open:split",
+    "E": "open:vsplit",
+    "t": "open:tab",
+    "<bs>": ["wait", "gotoParent"],
+    "gs": ["wait", "reveal:select"],
+    "il": "preview:labeling",
+    "ic": "preview:content",
+    "Il": "previewOnHover:toggle:labeling",
+    "Ic": "previewOnHover:toggle:content",
+    "II": "previewOnHover:disable",
+
+    "yp": "copyFilepath",
+    "yn": "copyFilename",
+    "yy": "copyFile",
+    "dd": "cutFile",
+    "p": "pasteFile",
+    "df": "delete",
+    "dF": "deleteForever",
+
+    "a": "addFile",
+    "A": "addDirectory",
+    "r": "rename",
+
+    "zh": "toggleHidden",
+    "g.": "toggleHidden",
+    "R": "refresh",
+
+    "?": "help",
+    "q": "quit",
+    "<esc>": "esc",
+    "X": "systemExecute",
+    "gd": "listDrive",
+
+    "f": "search",
+    "F": "searchRecursive",
+
+    "gf": "gotoSource:file",
+    "gb": "gotoSource:buffer",
+
+    "[[": ["wait", "sourcePrev"],
+    "]]": ["wait", "sourceNext"],
+
+    "[i": ["wait", "indentPrev"],
+    "]i": ["wait", "indentNext"],
+
+    "[m": ["wait", "markPrev:modified"],
+    "]m": ["wait", "markNext:modified"],
+
+    "[d": ["wait", "markPrev:diagnosticError:diagnosticWarning"],
+    "]d": ["wait", "markNext:diagnosticError:diagnosticWarning"],
+    "[D": ["wait", "markPrev:diagnosticError"],
+    "]D": ["wait", "markNext:diagnosticError"],
+
+    "[c": ["wait", "markPrev:git"],
+    "]c": ["wait", "markNext:git"],
+    "<<": "gitStage",
+    ">>": "gitUnstage"
+  },
+
+  // Auto format
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "python.django",
+    "html",
+    "htmldjango",
+    "django-html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
+    "graphql",
+    "markdown"
+  ],
+
+  // snippets
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
+  "snippets.loadFromExtensions": true,
+  "snippets.ultisnips.enable": true,
+  "snippets.snipmate.enable": false,
+  // VS Code snippets for Ubuntu
+  // "snippets.textmateSnippetsRoots": [
+  //    "~/.config/Code/User/snippets"
+  // ],
+  // VS Code snippets for Mac
+  "snippets.textmateSnippetsRoots": [
+    "~/Library/Application Support/Code/User/snippets"
+  ],
+
+  // emmet
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.includeLanguages": {
+    "htmldjango": "html",
+    "django-html": "html",
+    "python.django": "python",
+    "vue-html": "html",
+    "javascript": "javascriptreact"
+  },
+
+  "suggest.echodocSupport": true,
+  "suggest.maxCompleteItemCount": 20,
+
+  // diagnostics
+  "diagnostic.errorSign": " ",
+  "diagnostic.warningSign": " ",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": " ",
+
+  // Python: https://github.com/neoclide/coc-python
+  // "python.languageServer": "Pylance"
+  //"python.setInterpreter": "$VIRTUAL_ENV/bin/python",
+  "python.jediEnabled": false,
+  "python.formatting.provider": "autopep8",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": ["--disable=F401, E722, C0116, C0115, W0613"],
+  "python.linting.mypyArgs": [
+    "--ignore-missing-imports",
+    "--follow-imports=silent",
+    "--show-column-numbers"
+  ],
+  "python.linting.ignorePatterns": [".vscode/*.py", "**/site-packages/**/*.py"],
+
+  // coc-pyright
+  // "python.analysis.autoImportCompletions": true,
+  // "python.analysis.autoSearchPaths": true,
+  // "python.analysis.diagnosticMode": "workspace",
+  // "python.pythonPath": "/Users/alanjui/.pyenv/shims/python",
+  // "python.pythonPath": "/Users/alanjui/.pyenv/versions/3.8.5/envs/test-002/bin/python",
+  "python.venvPath": "/Users/alanjui/.pyenv/versions/3.8.5/envs",
+  // "python.venvFolders": ["test-002", ".pyenv", "envs"],
+
+  // Language Servers
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    }
+  }
+}
