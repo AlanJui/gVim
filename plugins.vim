@@ -81,6 +81,7 @@ Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'chemzqm/denite-git'
 
 " File manage and exploration
+Plug 'francoiscabrol/ranger.vim' 
 
 " === Git Plugins === "
 " Enable git changes to be shown in sign column

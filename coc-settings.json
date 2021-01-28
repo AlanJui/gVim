@@ -154,7 +154,7 @@
   // "python.analysis.diagnosticMode": "workspace",
   // "python.pythonPath": "/Users/alanjui/.pyenv/shims/python",
   // "python.pythonPath": "/Users/alanjui/.pyenv/versions/3.8.5/envs/test-002/bin/python",
-  "python.venvPath": "/Users/alanjui/.pyenv/versions/3.8.5/envs",
+  "python.venvPath": "/Users/alanjui/.pyenv/versions/3.9.1/envs",
   // "python.venvFolders": ["test-002", ".pyenv", "envs"],
 
   // Language Servers

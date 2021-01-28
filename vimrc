@@ -37,6 +37,7 @@ let g:python3_host_prog = "$HOME/.pyenv/shims/python3"
 " 擴充套件(Plugins)
 "====================================================================
 source ~/.vim/plugins.vim
+source ~/.vim/config/ranger.vim
 
 "====================================================================
 " Vim 通用設定
