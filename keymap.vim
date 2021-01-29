@@ -10,18 +10,18 @@ let mapleader = ","
 " 設定檔作業
 
 " 編輯設定檔
-nmap <Leader>ci :tabnew ~/.config/nvim/init.vim<CR>
-nmap <Leader>cg :tabnew ~/.config/nvim/global.vim<CR>
-nmap <Leader>cf :tabnew ~/.config/nvim/format.vim<CR>
-nmap <Leader>ck :tabnew ~/.config/nvim/keymap.vim<CR>
-nmap <Leader>cp :tabnew ~/.config/nvim/plugins.vim<CR>
-nmap <Leader>cv :tabnew ~/.config/nvim/coc-nvim.vim<CR>
-nmap <Leader>cj :tabnew ~/.config/nvim/coc-settings.json<CR>
-nmap <Leader>cI :source ~/.config/nvim/init.vim<CR>
+nmap <Leader>ci :tabnew ~/.vim/vimrc<CR>
+nmap <Leader>cg :tabnew ~/.vim/global.vim<CR>
+nmap <Leader>cf :tabnew ~/.vim/format.vim<CR>
+nmap <Leader>ck :tabnew ~/.vim/keymap.vim<CR>
+nmap <Leader>cp :tabnew ~/.vim/plugins.vim<CR>
+nmap <Leader>cv :tabnew ~/.vim/coc-nvim.vim<CR>
+nmap <Leader>cj :tabnew ~/.vim/coc-settings.json<CR>
+nmap <Leader>cI :source ~/.vim/init.vim<CR>
 
 " 依據設定檔重啟設定
-nmap <Leader>i :tabnew ~/.config/nvim/init.vim<CR>
-nmap <Leader>I :source ~/.config/nvim/init.vim<CR>
+nmap <Leader>i :tabnew ~/.vim/vimrc<CR>
+nmap <Leader>I :source ~/.vim/vimrc<CR>
 
 
 "--------------------------------------------------------------
@@ -30,11 +30,11 @@ nmap <Leader>I :source ~/.config/nvim/init.vim<CR>
 " 切割視窗指令：
 "  - 水平切割： :sp   ==>  :10sp [FileName]10+
 "  - 垂直切割： :vsp  ==>  :vsp [FileName]
-nnoremap <Leader>ws <C-W>s 		" 遊標所在視窗做垂直切割
-nnoremap <Leader>w- <C-W>s 		" 遊標所在視窗做垂直切割
-nnoremap <Leader>wv <C-W>v 		" 遊標所在視窗做水平切割
-nnoremap <Leader>w_ <C-W>v 		" 遊標所在視窗做水平切割
-nnoremap <Leader>w\| <C-W>v		" 遊標所在視窗做水平切割
+nnoremap <Leader>wv <C-W>v 		" 遊標所在視窗做垂直切割
+nnoremap <Leader>w_ <C-W>v 		" 遊標所在視窗做垂直切割
+nnoremap <Leader>ws <C-W>s 		" 遊標所在視窗做水平切割
+nnoremap <Leader>w- <C-W>s 		" 遊標所在視窗做水平切割
+nnoremap <Leader>w\| <C-W>v		" 遊標所在視窗做垂直切割
 
 
 " 調整視窗的寬度／高度
@@ -184,7 +184,6 @@ inoremap <M-Up>   :m .-2<CR>==
 "--------------------------------------------------------------
 " 跳脫 Visual Mode
 vnoremap v <Esc>
-
 
 
 " Automatically re-read file if a change was detected outside of vim
