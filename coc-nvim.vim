@@ -20,14 +20,15 @@ let g:coc_global_extensions = [
 \ 'coc-git',
 \ 'coc-css',
 \ 'coc-html',
-\ 'coc-python',
 \ 'coc-docker',
 \ 'coc-yaml',
 \ 'coc-sh',
 \ 'coc-json',
 \ 'coc-xml',
-\ 'coc-yank'
+\ 'coc-yank',
+\ 'coc-pyright',
 \ ]
+" \ 'coc-python',
 
 
 "--------------------------------------------------------------
