@@ -12,7 +12,7 @@ set noshowcmd
 
 set undolevels=700
 set history=1000
-set timeout timeoutlen=1500
+set timeout timeoutlen=500
 
 
 "--------------------------------------------------------------

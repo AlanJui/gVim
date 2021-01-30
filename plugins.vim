@@ -83,6 +83,7 @@ Plug 'chemzqm/denite-git'
 " File manage and exploration
 Plug 'francoiscabrol/ranger.vim' 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " === Git Plugins === "
 " Enable git changes to be shown in sign column
