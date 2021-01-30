@@ -1,5 +1,6 @@
 " Keymap
-map <silent> <Leader>f :GFiles<CR>
+map <silent> <Leader>f :Files<CR>
+map <silent> <Leader>g :GFiles<CR>
 map <silent> <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
 nnoremap <leader>t :Tags<CR>
@@ -26,6 +27,7 @@ let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffse
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden"
+" let $FZF_DEFAULT_COMMAND="rg --files"
 
 
 " Customize fzf colors to match your color scheme
