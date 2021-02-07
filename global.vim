@@ -88,3 +88,14 @@ set splitright      " 垂直切割時，在右產生新視窗
 set scrolloff=3
 
 
+" indents
+filetype indent on
+set shiftwidth=2
+set tabstop=2
+set ai "Auto indent
+set si "Smart indent
+set nowrap "No Wrap lines
+set backspace=start,eol,indent
+" Finding files - Search down into subfolders
+set path+=**
+set wildignore+=*/node_modules/*

@@ -17,28 +17,26 @@ au FocusLost,WinLeave * :silent! w
 "--------------------------------------------------------------
 " 作業系統層級設定
 
-let g:loaded_ruby_provider = 0
-let g:loaded_perl_provider = 0
-
+" let g:loaded_ruby_provider = 0
+" let g:loaded_perl_provider = 0
+"
 " Python for NeoVim (PyNvim)
-let g:python3_host_prog = "$HOME/.pyenv/shims/python3"
-"let g:python3_host_prog = "/Users/alanjui/.pyenv/shims/python3"
-" " Figure out the system Python for Neovim.
-" if exists("$VIRTUAL_ENV")
-"     let g:python3_host_prog=substitute(system("which -a python3 | head -n2 | tail -n1"), "\n", '', 'g')
-"     "let g:python3_host_prog = "$VIRTUAL_ENV/bin/python"
-"     " let g:python3_host_prog = "$HOME/.pyenv/shims/python"
-" else
-"     let g:python3_host_prog = substitute(system("which python3"), "\n", '', 'g')
-"     "let g:python3_host_prog = "$HOME/.pyenv/shims/python"
-" endif
+" let g:python3_host_prog = "$HOME/.pyenv/shims/python3"
 
 "====================================================================
 " 擴充套件(Plugins)
 "====================================================================
 source ~/.vim/plugins.vim
+" source ~/.vim/config/denite.vim
 source ~/.vim/config/ranger.vim
 source ~/.vim/config/fzf.vim
+source ~/.vim/config/surround.vim
+source ~/.vim/config/auto-pairs.vim
+source ~/.vim/config/multiple-cursors.vim
+source ~/.vim/config/simply-fold.vim
+source ~/.vim/config/nerd-commenter.vim
+source ~/.vim/config/plant-uml.vim
+source ~/.vim/config/markdown-preview.vim
 
 "====================================================================
 " Vim 通用設定
@@ -65,8 +63,32 @@ source ~/.vim/keymap.vim
 "===================================================================
 source ~/.vim/UI.vim
 
+" source ~/.vim/config/color-theme-ccc.vim
+source ~/.vim/config/color-theme-solarized.vim
+
+" Status line
+source ~/.vim/config/airline-theme.vim
+
+" if !exists('*fugitive#statusline')
+"   set statusline=%F\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}[L%l/%L,C%03v]
+"   set statusline+=%=
+"   set statusline+=%{fugitive#statusline()}
+" endif
+"
+" source ~/.vim/config/light-line.vim
+
 "===================================================================
 " 其它設定
 "===================================================================
 source ~/.vim/Misc.vim
 
+if has("unix")
+  let s:uname = system("uname -s")
+  " Do Mac stuff
+  if s:uname == "Darwin\n"
+    source ~/.vim/vimrc.osx
+  endif
+endif
+
+
+set exrc
