@@ -10,17 +10,17 @@ let mapleader = ","
 " 設定檔作業
 
 " 編輯設定檔
-nmap <Leader>ci :tabnew ~/.vim/vimrc<CR>
-nmap <Leader>cg :tabnew ~/.vim/global.vim<CR>
-nmap <Leader>cf :tabnew ~/.vim/format.vim<CR>
-nmap <Leader>ck :tabnew ~/.vim/keymap.vim<CR>
-nmap <Leader>cp :tabnew ~/.vim/plugins.vim<CR>
-nmap <Leader>cv :tabnew ~/.vim/coc-nvim.vim<CR>
-nmap <Leader>cj :tabnew ~/.vim/coc-settings.json<CR>
+nmap <Leader>ci :e ~/.vim/vimrc<CR>
+nmap <Leader>cg :e ~/.vim/global.vim<CR>
+nmap <Leader>cf :e ~/.vim/format.vim<CR>
+nmap <Leader>ck :e ~/.vim/keymap.vim<CR>
+nmap <Leader>cp :e ~/.vim/plugins.vim<CR>
+nmap <Leader>cv :e ~/.vim/coc-nvim.vim<CR>
+nmap <Leader>cj :e ~/.vim/coc-settings.json<CR>
 nmap <Leader>cI :source ~/.vim/init.vim<CR>
 
 " 依據設定檔重啟設定
-nmap <Leader>i :tabnew ~/.vim/vimrc<CR>
+nmap <Leader>i :e ~/.vim/vimrc<CR>
 nmap <Leader>I :source ~/.vim/vimrc<CR>
 
 
@@ -164,7 +164,6 @@ nnoremap <M-Down> :m .+1<CR>==
 nnoremap <M-Up>   :m .-2<CR>==
 inoremap <M-Down> :m .+1<CR>==
 inoremap <M-Up>   :m .-2<CR>==
-
 
 
 "--------------------------------------------------------------

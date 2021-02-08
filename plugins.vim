@@ -132,17 +132,10 @@ Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 call plug#end()
 
 
-"==============================================================
-" 擴充套件設定
-"==============================================================
-
-" 設定 <Leader> 鍵
-let mapleader = ","
-
-
-"--------------------------------------------------------------
-" === echodoc === "
-" Enable echodoc on startup
-let g:echodoc#enable_at_startup = 1
+" Automatically install missing plugins on startup
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
 
 

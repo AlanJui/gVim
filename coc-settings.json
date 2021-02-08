@@ -1,87 +1,105 @@
 {
-  "suggest.noselect": false,
-
   // Explorer
+  //"explorer.file.root.template": "[icon] [git] [hidden & 1][root]",
+  "explorer.width": 30,
+  "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
+  "explorer.file.root.template": "[icon] [git] [hidden & 1] PROJECT ([root])",
+  "explorer.file.child.template": "[git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
+  "explorer.icon.enableNerdfont": true,
+  "explorer.icon.enableVimDevicons": false,
+  "explorer.previewAction.onHover": false,
+  "explorer.file.showHiddenFiles": false,
   "explorer.keyMappings.global": {
-    "i": false, // cancel default mapkey
-
-    "*": "toggleSelection",
-    "<tab>": "actionMenu",
-
-    "gk": ["wait", "expandablePrev"],
-    "gj": ["wait", "expandableNext"],
-    "h": ["wait", "collapse"],
-    "l": ["wait", "expandable?", "expand", "open"],
-    "J": ["wait", "toggleSelection", "normal:j"],
-    "K": ["wait", "toggleSelection", "normal:k"],
-    "gl": ["wait", "expand:recursive"],
-    "gh": ["wait", "collapse:recursive"],
-    "<2-LeftMouse>": [
-      "expandable?",
-      ["expanded?", "collapse", "expand"],
-      "open"
-    ],
-    "o": ["wait", "expanded?", "collapse", "expand"],
-    "<cr>": ["wait", "expandable?", "cd", "open"],
-    "e": "open",
-    "s": "open:split",
-    "E": "open:vsplit",
-    "t": "open:tab",
-    "<bs>": ["wait", "gotoParent"],
-    "gs": ["wait", "reveal:select"],
-    "il": "preview:labeling",
-    "ic": "preview:content",
-    "Il": "previewOnHover:toggle:labeling",
-    "Ic": "previewOnHover:toggle:content",
-    "II": "previewOnHover:disable",
-
-    "yp": "copyFilepath",
-    "yn": "copyFilename",
-    "yy": "copyFile",
-    "dd": "cutFile",
-    "p": "pasteFile",
-    "df": "delete",
-    "dF": "deleteForever",
-
-    "a": "addFile",
-    "A": "addDirectory",
-    "r": "rename",
-
-    "zh": "toggleHidden",
-    "g.": "toggleHidden",
-    "R": "refresh",
-
-    "?": "help",
-    "q": "quit",
-    "<esc>": "esc",
-    "X": "systemExecute",
-    "gd": "listDrive",
-
-    "f": "search",
-    "F": "searchRecursive",
-
-    "gf": "gotoSource:file",
-    "gb": "gotoSource:buffer",
-
-    "[[": ["wait", "sourcePrev"],
-    "]]": ["wait", "sourceNext"],
-
-    "[i": ["wait", "indentPrev"],
-    "]i": ["wait", "indentNext"],
-
-    "[m": ["wait", "markPrev:modified"],
-    "]m": ["wait", "markNext:modified"],
-
-    "[d": ["wait", "markPrev:diagnosticError:diagnosticWarning"],
-    "]d": ["wait", "markNext:diagnosticError:diagnosticWarning"],
-    "[D": ["wait", "markPrev:diagnosticError"],
-    "]D": ["wait", "markNext:diagnosticError"],
-
-    "[c": ["wait", "markPrev:git"],
-    "]c": ["wait", "markNext:git"],
-    "<<": "gitStage",
-    ">>": "gitUnstage"
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit",
+    "mm": "rename",
+    "mc": "copyFile",
+    "C": "copyFile",
+    "md": "delete",
+    "D": "delete",
+    "ma": "addFile",
+    "mA": "addDirectory"
   },
+  // "explorer.keyMappings.global": {
+  //   "i": false, // cancel default mapkey
+  //
+  //   "*": "toggleSelection",
+  //   "<tab>": "actionMenu",
+  //
+  //   "gk": ["wait", "expandablePrev"],
+  //   "gj": ["wait", "expandableNext"],
+  //   "h": ["wait", "collapse"],
+  //   "l": ["wait", "expandable?", "expand", "open"],
+  //   "J": ["wait", "toggleSelection", "normal:j"],
+  //   "K": ["wait", "toggleSelection", "normal:k"],
+  //   "gl": ["wait", "expand:recursive"],
+  //   "gh": ["wait", "collapse:recursive"],
+  //   "<2-LeftMouse>": [
+  //     "expandable?",
+  //     ["expanded?", "collapse", "expand"],
+  //     "open"
+  //   ],
+  //   "o": ["wait", "expanded?", "collapse", "expand"],
+  //   "<cr>": ["wait", "expandable?", "cd", "open"],
+  //   "e": "open",
+  //   "s": "open:split",
+  //   "E": "open:vsplit",
+  //   "t": "open:tab",
+  //   "<bs>": ["wait", "gotoParent"],
+  //   "gs": ["wait", "reveal:select"],
+  //   "il": "preview:labeling",
+  //   "ic": "preview:content",
+  //   "Il": "previewOnHover:toggle:labeling",
+  //   "Ic": "previewOnHover:toggle:content",
+  //   "II": "previewOnHover:disable",
+  //
+  //   "yp": "copyFilepath",
+  //   "yn": "copyFilename",
+  //   "yy": "copyFile",
+  //   "dd": "cutFile",
+  //   "p": "pasteFile",
+  //   "df": "delete",
+  //   "dF": "deleteForever",
+  //
+  //   "a": "addFile",
+  //   "A": "addDirectory",
+  //   "r": "rename",
+  //
+  //   "zh": "toggleHidden",
+  //   "g.": "toggleHidden",
+  //   "R": "refresh",
+  //
+  //   "?": "help",
+  //   "q": "quit",
+  //   "<esc>": "esc",
+  //   "X": "systemExecute",
+  //   "gd": "listDrive",
+  //
+  //   "f": "search",
+  //   "F": "searchRecursive",
+  //
+  //   "gf": "gotoSource:file",
+  //   "gb": "gotoSource:buffer",
+  //
+  //   "[[": ["wait", "sourcePrev"],
+  //   "]]": ["wait", "sourceNext"],
+  //
+  //   "[i": ["wait", "indentPrev"],
+  //   "]i": ["wait", "indentNext"],
+  //
+  //   "[m": ["wait", "markPrev:modified"],
+  //   "]m": ["wait", "markNext:modified"],
+  //
+  //   "[d": ["wait", "markPrev:diagnosticError:diagnosticWarning"],
+  //   "]d": ["wait", "markNext:diagnosticError:diagnosticWarning"],
+  //   "[D": ["wait", "markPrev:diagnosticError"],
+  //   "]D": ["wait", "markNext:diagnosticError"],
+  //
+  //   "[c": ["wait", "markPrev:git"],
+  //   "]c": ["wait", "markNext:git"],
+  //   "<<": "gitStage",
+  //   ">>": "gitUnstage"
+  // },
 
   // Auto format
   "coc.preferences.formatOnSaveFiletypes": [
@@ -90,12 +108,16 @@
     "html",
     "htmldjango",
     "django-html",
+    "css",
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
     "typescript.tsx",
     "graphql",
+    "yaml",
+    "json",
+    "jsonc",
     "markdown"
   ],
 
@@ -107,9 +129,7 @@
   // VS Code snippets
   //  - Ubuntu:  "~/.config/Code/User/snippets"
   //  - macOS:   "~/Library/Application Support/Code/User/snippets"
-  "snippets.textmateSnippetsRoots": [
-      "~/.config/nvim/snips"
-  ],
+  "snippets.textmateSnippetsRoots": ["~/.config/nvim/snips"],
 
   // emmet
   "emmet.showExpandedAbbreviation": "always",
@@ -124,6 +144,7 @@
 
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
+  "suggest.noselect": false,
 
   // diagnostics
   "diagnostic.errorSign": " ",
@@ -150,6 +171,9 @@
   // "python.pythonPath": "/Users/alanjui/.pyenv/versions/3.9.1/bin/python",
   // "python.venvPath": "/Users/alanjui/.pyenv/versions/3.9.1/envs",
   // "python.venvFolders": ["venv-3.9.1", ".venv", "venv"],
+  "pyright.disableCompletion": false,
+  "pyright.disableLanguageServices": false,
+  "pyright.disableOrganizeImports": false,
 
   // Language Servers
   "languageserver": {

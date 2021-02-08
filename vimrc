@@ -13,16 +13,6 @@ let g:mapleader = ","
 au FocusGained,BufEnter * :silent! checktime
 au FocusLost,WinLeave * :silent! w
 
-
-"--------------------------------------------------------------
-" 作業系統層級設定
-
-" let g:loaded_ruby_provider = 0
-" let g:loaded_perl_provider = 0
-"
-" Python for NeoVim (PyNvim)
-" let g:python3_host_prog = "$HOME/.pyenv/shims/python3"
-
 "====================================================================
 " 擴充套件(Plugins)
 "====================================================================
@@ -52,6 +42,7 @@ source ~/.vim/format.vim
 " COC-NVIM 配合環境
 "===================================================================
 source ~/.vim/coc-nvim.vim
+source ~/.vim/config/coc-explorer.vim
 
 "===================================================================
 " 快速鍵設定
@@ -68,13 +59,6 @@ source ~/.vim/config/color-theme-solarized.vim
 
 " Status line
 source ~/.vim/config/airline-theme.vim
-
-" if !exists('*fugitive#statusline')
-"   set statusline=%F\ %m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}[L%l/%L,C%03v]
-"   set statusline+=%=
-"   set statusline+=%{fugitive#statusline()}
-" endif
-"
 " source ~/.vim/config/light-line.vim
 
 "===================================================================
