@@ -1,4 +1,4 @@
-"--------------------------------------------------------------
+"------------------------------------------------------------
 " 多重游標操作
 " Multiple cursors support 
 " URL: https://github.com/neoclide/coc.nvim/wiki/Multiple-cursors-support

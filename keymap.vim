@@ -105,9 +105,11 @@ nnoremap tp gT
 " 離開插入模式，回返一般模式
 imap jj <Esc>
 
-" 不離開插入模式下，在游標下新插入一行
-imap <Leader>o  <Esc>o
-imap <Leader>O  <Esc>O
+" 進入「貼上（Paste）」模式
+set pastetoggle=<F2>
+
+" 復行一次
+nnoremap U <C-r>
 
 
 "--------------------------------------------------------------
@@ -136,34 +138,42 @@ imap ;;; <Right>;
 imap <Leader>{ <Esc>A<Space>{}<Left>
 imap <Leader>$ $();<Left><Left>
 
-" 進入「貼上（Paste）」模式
-set pastetoggle=<F2>
+"--------------------------------------------------------------
+" 行編輯
 
-" 復行一次
-nnoremap U <C-r>
+" 複製一行，並繼續編輯
+nmap <Leader>d  <Esc>yyp 
+nmap <Leader>D  <Esc>kyyp 
+imap <Leader>d  <Esc>yyp 
+imap <Leader>D  <Esc>kyyp 
 
+
+" 不離開插入模式下，在游標下新插入一行
+imap <Leader>o  <Esc>o
+imap <Leader>O  <Esc>O
 
 " 游標所在處到行尾的文字，將之複製
 nnoremap Y y$
-
 
 " 行間操作
 nnoremap H ^									" 游標移到行頭
 nnoremap L $									" 游標移到行尾
 
 
-" 搬移文字
-nnoremap <M-j> :m .+1<CR>==
-nnoremap <M-k> :m .-2<CR>==
-inoremap <M-j> <Esc>:m .+1<CR>==gi
-inoremap <M-k> <Esc>:m .-2<CR>==gi
-vnoremap <M-j> :m '>+1<CR>gv=gv
-vnoremap <M-k> :m '<-2<CR>gv=gv
+" 搬移文字(Move Line)
+nnoremap <S-DOWN> :m .+1<CR>==
+nnoremap <S-UP> :m .-2<CR>==
+inoremap <S-DOWN> <Esc>:m .+1<CR>==gi
+inoremap <S-UP> <Esc>:m .-2<CR>==gi
+vnoremap <S-DOWN> :m '>+1<CR>gv=gv
+vnoremap <S-UP> :m '<-2<CR>gv=gv
 
-nnoremap <M-Down> :m .+1<CR>==
-nnoremap <M-Up>   :m .-2<CR>==
-inoremap <M-Down> :m .+1<CR>==
-inoremap <M-Up>   :m .-2<CR>==
+" nnoremap <A-j> :m .+1<CR>
+" nnoremap <A-k> :m .-2<CR>
+" inoremap <A-j> <Esc>:m .+1<CR>
+" inoremap <A-k> <Esc>:m .-2<CR>
+" vnoremap <A-j> :m '>+1<CR>
+" vnoremap <A-k> :m '<-2<CR>
 
 
 "--------------------------------------------------------------
