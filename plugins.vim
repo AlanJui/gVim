@@ -33,7 +33,7 @@ Plug 'https://github.com/andys8/vscode-jest-snippets.git'
 
 " Auto-pairs
 Plug 'jiangmiao/auto-pairs/'
-Plug 'tpope/vim-surround' 
+Plug 'tpope/vim-surround'
 
 " Multiple cursor editting
 Plug 'terryma/vim-multiple-cursors'
@@ -44,6 +44,8 @@ Plug 'scrooloose/nerdcommenter'
 " Print function signatures in echo area
 Plug 'Shougo/echodoc.vim'
 
+" The plug-in visualizes undo history and makes it easier to browse and switch between different undo branches.
+Plug 'mbbill/undotree'
 
 "------------------------------------------------------------
 " 程式排版 & 視覺導引
@@ -77,7 +79,7 @@ Plug 'Yggdroot/indentLine'
 " Plug 'neoclide/coc-denite'
 
 " File manage and exploration
-Plug 'francoiscabrol/ranger.vim' 
+Plug 'francoiscabrol/ranger.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -91,6 +93,12 @@ Plug 'tpope/vim-fugitive'
 " 使用者操作介面
 
 Plug 'liuchengxu/vim-which-key'
+
+" Float Terminal
+Plug 'voldikss/vim-floaterm'
+
+" Swap windows
+Plug 'wesQ3/vim-windowswap'
 
 " Color Scheme: Support True Color
 Plug 'lifepillar/vim-solarized8'
@@ -112,7 +120,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 "------------------------------------------------------------
-" 其它 
+" 其它
 
 " PlantUML
 Plug 'scrooloose/vim-slumlord'

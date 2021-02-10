@@ -20,7 +20,6 @@ au FocusLost,WinLeave * :silent! w
 source ~/.vim/plugins.vim
 
 " 擴充套件設定（Configuration of Plugins)
-" source ~/.vim/config/denite.vim
 source ~/.vim/config/ranger.vim
 source ~/.vim/config/fzf.vim
 source ~/.vim/config/surround.vim
@@ -30,7 +29,9 @@ source ~/.vim/config/simply-fold.vim
 source ~/.vim/config/nerd-commenter.vim
 source ~/.vim/config/plant-uml.vim
 source ~/.vim/config/markdown-preview.vim
-" source ~/.vim/config/echodoc.vim
+source ~/.vim/config/window-swap.vim
+source ~/.vim/config/float-term.vim
+source ~/.vim/config/echodoc.vim
 
 "===========================================================
 " Vim 通用設定
@@ -54,7 +55,7 @@ source ~/.vim/config/coc-explorer.vim
 source ~/.vim/keymap.vim
 
 source ~/.vim/config/which-key.vim
- 
+
 "==========================================================
 " 使用者操作介面設定
 "==========================================================
