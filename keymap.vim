@@ -142,10 +142,10 @@ imap <Leader>$ $();<Left><Left>
 " 行編輯
 
 " 複製一行，並繼續編輯
-nmap <Leader>d  <Esc>yyp 
-nmap <Leader>D  <Esc>kyyp 
-imap <Leader>d  <Esc>yyp 
-imap <Leader>D  <Esc>kyyp 
+nmap <Leader>d  <Esc>yyp
+nmap <Leader>D  <Esc>kyyp
+imap <Leader>d  <Esc>yyp
+imap <Leader>D  <Esc>kyyp
 
 
 " 不離開插入模式下，在游標下新插入一行
@@ -205,11 +205,11 @@ map <Leader>fC :bd!<CR>     " 已編輯，不存檔，強迫關閉
 
 " 儲存檔案
 nmap <Leader>w :w!<CR>
-imap <Leader>w :w!<CR>
+imap <Leader>w <Esc>:w!<CR>
 vmap <Leader>w :w!<CR>
 
 nmap <C-s> :w!<CR>
-imap <C-s> :w!<CR>
+imap <C-s> <Esc>:w!<CR>
 vmap <C-s> :w!<CR>
 
 

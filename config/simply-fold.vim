@@ -1,6 +1,5 @@
 "--------------------------------------------------------------
 " 程式碼開展與折疊操作：SimplyFold
-"
 " - zo： Open fold in current cursor postion
 " - zO： Open fold and sub-fold in current cursor postion recursively
 " - zc： Close the fold in current cursor position
@@ -30,11 +29,20 @@ let g:SimpylFold_fold_import = 0
 " Fold imports (buffer local)   1
 let b:SimpylFold_fold_import = 0
 
-" 拆疊／展開開關
-nmap <Space> za
+" " 拆疊／展開開關
+" nmap <Space> za
+"
+" " Ref: https://vim.fandom.com/wiki/Folding  [Mappings to toggle folds]
+" nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+" vnoremap <Space> zf
 
-" Ref: https://vim.fandom.com/wiki/Folding  [Mappings to toggle folds]
-nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
-vnoremap <Space> zf
 
 
+"--------------------------------------------------------------
+" Ref: http://yyq123.blogspot.com/2011/09/vim-fold.html
+" :help fold-commands
+" :help fold-manual
+" zf11j
+" zfa{
+" zfa[
+set foldmethod=manual

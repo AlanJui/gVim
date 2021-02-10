@@ -8,26 +8,40 @@ set number                  " 顯示行號
 set relativenumber          " 在遊標所在處顯示相對行號
 set cursorline
 
-
 " 令程式碼檔案可有語法（Syntax）高亮標示
 syntax on
-set background=dark
 filetype on
-
+set background=dark
 
 " 程式碼排版規範
 set colorcolumn=80          " 設定每行能放 80 個字元
 
-"set nowrap                 " 不用依據 colorcolumn 的規範，在自動換行
-set wrap                    " 設定自動換行
-set autoindent              " indent a new line the same amount as the line just typed
+" 自動換行控制
+set nowrap                  " 不用依據 colorcolumn 的規範，在自動換行
+" set wrap                    " 設定自動換行
 
+" 自動縮排控制
+filetype indent on
+set autoindent              "ai: indent a new line the same amount as the line just typed
+set smartindent             "si: Smart indent
 
-" Tabs and spaces handling
+" Tab 與空白控制
 set expandtab				" always uses spaces instead of tab characters
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4
+
+" set backspace=2
+set backspace=start,eol,indent
+
+" 標示多餘空白【務必放在 ColorScheme 設定之前】
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
+" Automatically removing all trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
+autocmd FileType py,html,htmldjango,javascript,css autocmd BufWritePre <buffer> %s/\s\+$//e
+
 
 " 不同 filetype 擁有各自的 "內縮設定" ，如： Python 為4空格；HTML則為2空格
 filetype plugin indent on
@@ -90,7 +104,7 @@ autocmd FileType css let b:comment_leader='/*'
 
 
 "--------------------------------------------------------------
-" Python 
+" Python
 
 
 " autocmd BufNewFile,BufRead *.py set filetype=python.django
@@ -115,13 +129,13 @@ autocmd FileType htmldjango let b:comment_leader='<!--'
 " === 自行判斷 filetype 是否為 htmldjango ===
 " 判別是否適用 django-html 檔案格式
 " 可能選項：
-"  (1) {% extends 
+"  (1) {% extends
 "  (2) {% block
 "  (3) {% load
 "  (4) {#
 " Regex Express 判別式：
-"  (1) {%\s*\(extends\|block\|load\)\>\|{#\s\+ 
-"  (2) {%\|{{\|{# 
+"  (1) {%\s*\(extends\|block\|load\)\>\|{#\s\+
+"  (2) {%\|{{\|{#
 
 " augroup filetypedetect
 "   " removes current htmldjango detection located at $VIMRUNTIME/filetype.vim

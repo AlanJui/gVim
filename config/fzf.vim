@@ -6,6 +6,12 @@ nnoremap <leader>g :Rg<CR>
 nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 
+" if hidden is not set, TextEdit of coc-nvim might fail.
+set hidden
+
+" Finding files - Search down into subfolders
+set path+=**
+set wildignore+=*/node_modules/*
 
 
 " This is the default extra key bindings

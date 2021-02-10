@@ -30,9 +30,9 @@ let g:which_key_map['?'] = 'search word'
 let g:which_key_use_floating_win = 0
 let g:which_key_max_size = 0
 
-" let g:which_key_position = 'botright'
-" let g:which_key_position = 'topleft'
 " let g:which_key_vertical = 1
+" let g:which_key_position = 'topleft'
+let g:which_key_position = 'botright'
 
 " Change the colors if you want
 
@@ -160,67 +160,37 @@ let g:which_key_map.m = {
       " CoC throws an error
       " \ 'a' : [':CocCommand bookmark.annotate', 'annotate bookmark'],
 
-" " s is for search
-" let g:which_key_map.s = {
-"       \ 'name' : '+search' ,
-"       \ '/' : [':History/'              , 'history'],
-"       \ ';' : [':Commands'              , 'commands'],
-"       \ 'a' : [':Ag'                    , 'text Ag'],
-"       \ 'b' : [':BLines'                , 'current buffer'],
-"       \ 'B' : [':Buffers'               , 'open buffers'],
-"       \ 'c' : [':Commits'               , 'commits'],
-"       \ 'C' : [':BCommits'              , 'buffer commits'],
-"       \ 'f' : [':Files'                 , 'files'],
-"       \ 'g' : [':GFiles'                , 'git files'],
-"       \ 'G' : [':GFiles?'               , 'modified git files'],
-"       \ 'h' : [':History'               , 'file history'],
-"       \ 'H' : [':History:'              , 'command history'],
-"       \ 'l' : [':Lines'                 , 'lines'] ,
-"       \ 'm' : [':Marks'                 , 'marks'] ,
-"       \ 'M' : [':Maps'                  , 'normal maps'] ,
-"       \ 'p' : [':Helptags'              , 'help tags'] ,
-"       \ 'P' : [':Tags'                  , 'project tags'],
-"       \ 's' : [':CocList snippets'      , 'snippets'],
-"       \ 'S' : [':Colors'                , 'color schemes'],
-"       \ 't' : [':Rg'                    , 'text Rg'],
-"       \ 'T' : [':BTags'                 , 'buffer tags'],
-"       \ 'w' : [':Windows'               , 'search windows'],
-"       \ 'y' : [':Filetypes'             , 'file types'],
-"       \ 'z' : [':FZF'                   , 'FZF'],
-"       \ }
-      " \ 's' : [':Snippets'     , 'snippets'],
-
 " s is for search
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
-      \ '/' : [':History/'              , 'history'],
+      \ '/' : [':History/'                              , 'history'],
       \ ';' : [':FzfPreviewCommandPalette'              , 'commands'],
-      \ 'a' : [':Ag'                    , 'text Ag'],
-      \ 'b' : [':CocCommand fzf-preview.BufferLines'                , 'current buffer'],
-      \ 'B' : [':CocCommand fzf-preview.Buffers'               , 'open buffers'],
-      \ 'c' : [':Commits'               , 'commits'],
-      \ 'C' : [':BCommits'              , 'buffer commits'],
-      \ 'd' : [':CocCommand fzf-preview.DirectoryFiles'              , 'directories'],
-      \ 'f' : [':CocCommand fzf-preview.ProjectFiles'                 , 'files'],
-      \ 'g' : [':CocCommand fzf-preview.GitFiles'                , 'git files'],
-      \ 'G' : [':GFiles?'               , 'modified git files'],
-      \ 'h' : [':History'               , 'file history'],
-      \ 'H' : [':History:'              , 'command history'],
-      \ 'l' : [':Lines'                 , 'lines'] ,
-      \ 'm' : [':CocCommand fzf-preview.Marks', 'list marks'],
-      \ 'M' : [':Maps'                  , 'normal maps'] ,
-      \ 'p' : [':Helptags'              , 'help tags'] ,
-      \ 'P' : [':Tags'                  , 'project tags'],
-      \ 'q' : [':CocCommand fzf-preview.QuickFix'                  , 'quickfix list'],
-      \ 's' : [':CocList snippets'      , 'snippets'],
-      \ 'S' : [':Colors'                , 'color schemes'],
-      \ 't' : [':Rg'                    , 'text Rg'],
-      \ 'T' : [':BTags'                 , 'buffer tags'],
-      \ 'w' : [':Windows'               , 'search windows'],
-      \ 'y' : [':Filetypes'             , 'file types'],
-      \ 'z' : [':FZF'                   , 'FZF'],
+      \ 'a' : [':Ag'                                    , 'text Ag'],
+      \ 'b' : [':CocCommand fzf-preview.BufferLines'    , 'current buffer'],
+      \ 'B' : [':CocCommand fzf-preview.Buffers'        , 'open buffers'],
+      \ 'c' : [':Commits'                               , 'commits'],
+      \ 'C' : [':BCommits'                              , 'buffer commits'],
+      \ 'd' : [':CocCommand fzf-preview.DirectoryFiles' , 'directories'],
+      \ 'f' : [':CocCommand fzf-preview.ProjectFiles'   , 'files'],
+      \ 'g' : [':CocCommand fzf-preview.GitFiles'       , 'git files'],
+      \ 'G' : [':GFiles?'                               , 'modified git files'],
+      \ 'h' : [':History'                               , 'file history'],
+      \ 'H' : [':History:'                              , 'command history'],
+      \ 'l' : [':Lines'                                 , 'lines'] ,
+      \ 'm' : [':CocCommand fzf-preview.Marks'          , 'list marks'],
+      \ 'M' : [':Maps'                                  , 'normal maps'] ,
+      \ 'p' : [':Helptags'                              , 'help tags'] ,
+      \ 'P' : [':Tags'                                  , 'project tags'],
+      \ 'q' : [':CocCommand fzf-preview.QuickFix'       , 'quickfix list'],
+      \ 's' : [':CocList snippets'                      , 'snippets'],
+      \ 'S' : [':Colors'                                , 'color schemes'],
+      \ 't' : [':Rg'                                    , 'text Rg'],
+      \ 'T' : [':BTags'                                 , 'buffer tags'],
+      \ 'w' : [':Windows'                               , 'search windows'],
+      \ 'y' : [':Filetypes'                             , 'file types'],
+      \ 'z' : [':FZF'                                   , 'FZF'],
       \ }
-" 
+"
 " :CocCommand fzf-preview.AllBuffers
 " :CocCommand fzf-preview.Changes
 " :CocCommand fzf-preview.Yankround
@@ -230,7 +200,7 @@ let g:which_key_map.s = {
 " :CocCommand fzf-preview.CocTypeDefinitions
 " \ 'l' : [':CocCommand fzf-preview.Bookmarks', 'list bookmarks'],
 " $FZF_PREVIEW_PREVIEW_BAT_THEME = 'ansi-dark'
-" 
+"
 
 let g:which_key_map.S = {
       \ 'name' : '+Session' ,
@@ -272,9 +242,6 @@ let g:which_key_map.g = {
       \ }
       " \ 'A' : [':Git add %'                        , 'add current'],
       " \ 'S' : [':!git status'                      , 'status'],
-" 
-" 
-" 
 
 let g:which_key_map.G = {
       \ 'name' : '+gist' ,
@@ -331,7 +298,7 @@ let g:which_key_map.l = {
 " t is for terminal
 let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
-      \ ';' : [':FloatermNew --wintype=normal --height=6'        , 'terminal'],
+      \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
