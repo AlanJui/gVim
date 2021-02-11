@@ -63,11 +63,8 @@ let g:which_key_map['w'] = [ ':call WindowSwap#EasyWindowSwap()'               ,
 " a is for actions
 let g:which_key_map.a = {
       \ 'name' : '+actions' ,
-      \ 'c' : [':ColorizerToggle'        , 'colorizer'],
       \ 'e' : [':CocCommand explorer'    , 'explorer'],
       \ 'h' : [':let @/ = ""'            , 'remove search highlight'],
-      \ 'l' : [':Bracey'                 , 'start live server'],
-      \ 'L' : [':BraceyStop'             , 'stop live server'],
       \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
       \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
       \ 'n' : [':set nonumber!'          , 'line-numbers'],
@@ -314,7 +311,11 @@ let g:which_key_map.t = {
 " u is for utilities
 let g:which_key_map.u = {
       \ 'name' : '+utility' ,
-      \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
+      \ 'l' : [':Bracey'                                        , 'start live server'],
+      \ 'L' : [':BraceyStop'                                    , 'stop live server'],
+      \ 'r' : [':BraceyReload'                                  , 'reload live server'],
+      \ 'm' : [':MarkdownPreview'                               , 'start markdown preview'],
+      \ 'M' : [':MarkdownPreviewStop'                           , 'stop markdown preview'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ }
 

@@ -47,6 +47,9 @@ Plug 'Shougo/echodoc.vim'
 " The plug-in visualizes undo history and makes it easier to browse and switch between different undo branches.
 Plug 'mbbill/undotree'
 
+" Auto change html tags
+Plug 'AndrewRadev/tagalong.vim'
+
 "------------------------------------------------------------
 " 程式排版 & 視覺導引
 
@@ -122,12 +125,24 @@ Plug 'vim-airline/vim-airline-themes'
 "------------------------------------------------------------
 " 其它
 
+" Live Server
+" Plug 'turbio/bracey.vim'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+
 " PlantUML
 Plug 'scrooloose/vim-slumlord'
 Plug 'aklt/plantuml-syntax'
 
+"------------------------------------------------------------
 " Markdown Preview
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" If you don't have nodejs and yarn
+" use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
+" see: https://github.com/iamcco/markdown-preview.nvim/issues/50
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+" If you have nodejs and yarn
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
 
 call plug#end()
 

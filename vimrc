@@ -27,11 +27,13 @@ source ~/.vim/config/auto-pairs.vim
 source ~/.vim/config/multiple-cursors.vim
 source ~/.vim/config/simply-fold.vim
 source ~/.vim/config/nerd-commenter.vim
-source ~/.vim/config/plant-uml.vim
+source ~/.vim/config/change-tag-name.vim
+source ~/.vim/config/live-server.vim
 source ~/.vim/config/markdown-preview.vim
 source ~/.vim/config/window-swap.vim
 source ~/.vim/config/float-term.vim
 source ~/.vim/config/echodoc.vim
+source ~/.vim/config/plant-uml.vim
 
 "===========================================================
 " Vim 通用設定
