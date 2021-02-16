@@ -41,7 +41,6 @@
 " is selected a unique key is looked up and sent to the client.
 "
 "-----------------------------------------------------------------------------------------------
-"
 "<Usage>:
 "
 " starts the bracey server and optionally opens your default web browser to bracey's address.
@@ -56,3 +55,10 @@
 " :BraceyEval [args]
 " if argument(s) are given then evaluate them as javascript in the browser. Otherwise, evaluate
 " the entire buffer (regardless of its filetype).
+
+"-----------------------------------------------------------------------------------------------
+"<Configuration>:
+"
+" (false:0, true:1, default: 0) whether or not to reload the current web page
+" whenever its corresponding buffer is written
+let g:bracey_refresh_on_save = 1

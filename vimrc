@@ -33,7 +33,9 @@ source ~/.vim/config/markdown-preview.vim
 source ~/.vim/config/window-swap.vim
 source ~/.vim/config/float-term.vim
 source ~/.vim/config/echodoc.vim
-source ~/.vim/config/plant-uml.vim
+" source ~/.vim/config/plant-uml.vim
+source ~/.vim/config/plantuml-previewer.vim
+source ~/.vim/config/find-and-replace.vim
 
 "===========================================================
 " Vim 通用設定

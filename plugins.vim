@@ -19,7 +19,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 "------------------------------------------------------------
-" 程式編輯
+" 編輯
 
 " Auto-complete (Intellisense Engine)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -49,6 +49,9 @@ Plug 'mbbill/undotree'
 
 " Auto change html tags
 Plug 'AndrewRadev/tagalong.vim'
+
+" Makes it easier to find and replace text through multiple files.
+Plug 'brooth/far.vim'
 
 "------------------------------------------------------------
 " 程式排版 & 視覺導引
@@ -105,6 +108,7 @@ Plug 'wesQ3/vim-windowswap'
 
 " Color Scheme: Support True Color
 Plug 'lifepillar/vim-solarized8'
+
 " Plug 'mhartington/oceanic-next'
 " Plug 'ayu-theme/ayu-vim'
 " Plug 'drewtempelmeyer/palenight.vim'
@@ -130,8 +134,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
 " PlantUML
-Plug 'scrooloose/vim-slumlord'
+" Plug 'scrooloose/vim-slumlord'
 Plug 'aklt/plantuml-syntax'
+Plug 'tyru/open-browser.vim'
+Plug 'weirongxu/plantuml-previewer.vim'
 
 "------------------------------------------------------------
 " Markdown Preview

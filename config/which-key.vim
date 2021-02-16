@@ -63,10 +63,7 @@ let g:which_key_map['w'] = [ ':call WindowSwap#EasyWindowSwap()'               ,
 " a is for actions
 let g:which_key_map.a = {
       \ 'name' : '+actions' ,
-      \ 'e' : [':CocCommand explorer'    , 'explorer'],
       \ 'h' : [':let @/ = ""'            , 'remove search highlight'],
-      \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
-      \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
       \ 'n' : [':set nonumber!'          , 'line-numbers'],
       \ 's' : [':s/\%V\(.*\)\%V/"\1"/'   , 'surround'],
       \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
@@ -126,35 +123,35 @@ let g:which_key_map.f = {
       \ 'p' : [':Farr --source=rgnvim'     , 'project'],
       \ }
 
-" k is for task
-let g:which_key_map.k = {
-      \ 'name' : '+task' ,
-      \ 'c' : [':AsyncTask file-compile'      , 'compile file'],
-      \ 'b' : [':AsyncTask project-build'     , 'build project'],
-      \ 'e' : [':AsyncTaskEdit'               , 'edit local tasks'],
-      \ 'f' : [':AsyncTaskFzf'                , 'find task'],
-      \ 'g' : [':AsyncTaskEdit!'              , 'edit global tasks'],
-      \ 'h' : [':AsyncTaskList!'              , 'list hidden tasks'],
-      \ 'l' : [':CocList tasks'               , 'list tasks'],
-      \ 'm' : [':AsyncTaskMacro'              , 'macro help'],
-      \ 'o' : [':copen'                       , 'open task view'],
-      \ 'r' : [':AsyncTask file-run'          , 'run file'],
-      \ 'p' : [':AsyncTask project-run'       , 'run project'],
-      \ 'x' : [':cclose'                      , 'close task view'],
-      \ }
-      " \ 'l' : [':AsyncTaskList'               , 'list tasks'],
+" " k is for task
+" let g:which_key_map.k = {
+"       \ 'name' : '+task' ,
+"       \ 'c' : [':AsyncTask file-compile'      , 'compile file'],
+"       \ 'b' : [':AsyncTask project-build'     , 'build project'],
+"       \ 'e' : [':AsyncTaskEdit'               , 'edit local tasks'],
+"       \ 'f' : [':AsyncTaskFzf'                , 'find task'],
+"       \ 'g' : [':AsyncTaskEdit!'              , 'edit global tasks'],
+"       \ 'h' : [':AsyncTaskList!'              , 'list hidden tasks'],
+"       \ 'l' : [':CocList tasks'               , 'list tasks'],
+"       \ 'm' : [':AsyncTaskMacro'              , 'macro help'],
+"       \ 'o' : [':copen'                       , 'open task view'],
+"       \ 'r' : [':AsyncTask file-run'          , 'run file'],
+"       \ 'p' : [':AsyncTask project-run'       , 'run project'],
+"       \ 'x' : [':cclose'                      , 'close task view'],
+"       \ }
+"       " \ 'l' : [':AsyncTaskList'               , 'list tasks'],
 
-" m is for mark
-let g:which_key_map.m = {
-      \ 'name' : '+mark' ,
-      \ 'c' : [':CocCommand bookmark.clearForCurrentFile', 'clear file'],
-      \ 'C' : [':CocCommand bookmark.clearForAllFiles', 'clear project'],
-      \ 'j' : [':CocCommand bookmark.next', 'next bookmark'],
-      \ 'k' : [':CocCommand bookmark.prev', 'prev bookmark'],
-      \ 't' : [':CocCommand bookmark.toggle', 'toggle bookmark'],
-      \ }
-      " CoC throws an error
-      " \ 'a' : [':CocCommand bookmark.annotate', 'annotate bookmark'],
+" " m is for mark
+" let g:which_key_map.m = {
+"       \ 'name' : '+mark' ,
+"       \ 'c' : [':CocCommand bookmark.clearForCurrentFile', 'clear file'],
+"       \ 'C' : [':CocCommand bookmark.clearForAllFiles', 'clear project'],
+"       \ 'j' : [':CocCommand bookmark.next', 'next bookmark'],
+"       \ 'k' : [':CocCommand bookmark.prev', 'prev bookmark'],
+"       \ 't' : [':CocCommand bookmark.toggle', 'toggle bookmark'],
+"       \ }
+"       " CoC throws an error
+"       " \ 'a' : [':CocCommand bookmark.annotate', 'annotate bookmark'],
 
 " s is for search
 let g:which_key_map.s = {
@@ -198,14 +195,14 @@ let g:which_key_map.s = {
 " $FZF_PREVIEW_PREVIEW_BAT_THEME = 'ansi-dark'
 "
 
-let g:which_key_map.S = {
-      \ 'name' : '+Session' ,
-      \ 'c' : [':SClose'          , 'Close Session']  ,
-      \ 'd' : [':SDelete'         , 'Delete Session'] ,
-      \ 'l' : [':SLoad'           , 'Load Session']     ,
-      \ 's' : [':Startify'        , 'Start Page']     ,
-      \ 'S' : [':SSave'           , 'Save Session']   ,
-      \ }
+" let g:which_key_map.S = {
+"       \ 'name' : '+Session' ,
+"       \ 'c' : [':SClose'          , 'Close Session']  ,
+"       \ 'd' : [':SDelete'         , 'Delete Session'] ,
+"       \ 'l' : [':SLoad'           , 'Load Session']     ,
+"       \ 's' : [':Startify'        , 'Start Page']     ,
+"       \ 'S' : [':SSave'           , 'Save Session']   ,
+"       \ }
 
 " g is for git
 let g:which_key_map.g = {
@@ -311,12 +308,15 @@ let g:which_key_map.t = {
 " u is for utilities
 let g:which_key_map.u = {
       \ 'name' : '+utility' ,
+      \ 'e' : [':CocCommand explorer'                           , 'explorer'],
+      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'l' : [':Bracey'                                        , 'start live server'],
       \ 'L' : [':BraceyStop'                                    , 'stop live server'],
       \ 'r' : [':BraceyReload'                                  , 'reload live server'],
       \ 'm' : [':MarkdownPreview'                               , 'start markdown preview'],
       \ 'M' : [':MarkdownPreviewStop'                           , 'stop markdown preview'],
-      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+      \ 'u' : [':PlantumlOpen'                                  , 'start plant-uml preview'],
+      \ 'U' : [':PlantumlSave docs/diagrams/out png'            , 'export plant-uml diagram'],
       \ }
 
 " w is for wiki
