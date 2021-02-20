@@ -261,6 +261,8 @@ $ sudo update-alternatives --remove lua-interpreter /usr/share/lua/5.4/lua
 
 ### Install Lua Language Server
 
+Ref: https://emacs-lsp.github.io/lsp-mode/page/lsp-lua-language-server/
+
 1. Install ninja
 
 Debian/Ubuntu:
@@ -322,14 +324,25 @@ Linux:
 macOS:
 
 ```
+mv ~/build/lua-language-server ~/.local/share/
+cd ~/.local/share/lua-language-server
 ./bin/macOS/lua-language-server -E ./main.lua
 ```
 
 6. Install
 
+Linux:
 ```
-cp -r bin/Linux ~/.local/share/lua-lsp
+mv ~/build/lua-language-server ~/.local/share/
+ln -s -f ~/.local/share/lua-language-server/bin/Linux/lua-language-server ~/.local/bin/lua-lsp
 ```
+
+macOS:
+```
+mv ~/build/lua-language-server ~/.local/share/
+ln -s -f ~/.local/share/lua-language-server/bin/macOS/lua-language-server ~/.local/bin/lua-lsp
+```
+
 
 ### Install lua language server support for vim
 

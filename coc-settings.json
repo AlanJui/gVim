@@ -103,6 +103,9 @@
       "args": ["start"],
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
+    },
+    lua: {
+        command: """/"
     }
   }
 }
