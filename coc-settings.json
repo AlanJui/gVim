@@ -39,6 +39,7 @@
     "yaml",
     "json",
     "jsonc",
+    "lua",
     "markdown"
   ],
 
@@ -104,8 +105,16 @@
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
     },
-    lua: {
-        command: """/"
+    "lua": {
+      "command": "~/.local/share/lua-language-server/bin/lua-language-server",
+      "args": [
+        "-E",
+        "-e",
+        "LANG=en",
+        "~/.local/share/lua-language-server/main.lua"
+      ],
+      "filetypes": ["lua"],
+      "trace.server": "verbose"
     }
   }
 }

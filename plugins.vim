@@ -65,13 +65,13 @@ Plug 'Yggdroot/indentLine'
 " === Syntax Highlighting === "
 
 " Syntax highlighting for nginx
-" Plug 'chr4/nginx.vim'
+Plug 'chr4/nginx.vim'
 
 " Syntax for json with comments
-" Plug 'neoclide/jsonc.vim'
+Plug 'neoclide/jsonc.vim'
 
 " Syntax highlighting for javascript libraries
-" Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/javascript-libraries-syntax.vim'
 
 
 "------------------------------------------------------------
@@ -106,25 +106,18 @@ Plug 'voldikss/vim-floaterm'
 " Swap windows
 Plug 'wesQ3/vim-windowswap'
 
-" Color Scheme: Support True Color
-Plug 'lifepillar/vim-solarized8'
-
-" Plug 'mhartington/oceanic-next'
-" Plug 'ayu-theme/ayu-vim'
-" Plug 'drewtempelmeyer/palenight.vim'
-
-" Plug 'morhetz/gruvbox'
-" Plug 'joshdick/onedark.vim'
-" Plug 'itchyny/lightline.vim'
-" Plug 'dracula/vim', { 'commit': '147f389f4275cec4ef43ebc25e2011c57b45cc00' }
-" Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
-
 " Add file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline
 Plug 'ryanoasis/vim-devicons'
+
+" Color Scheme: Support True Color
+Plug 'lifepillar/vim-solarized8'
+Plug 'morhetz/gruvbox'
 
 " Customized vim status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+Plug 'itchyny/lightline.vim'
 
 "------------------------------------------------------------
 " 其它
@@ -134,7 +127,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
 " PlantUML
-" Plug 'scrooloose/vim-slumlord'
 Plug 'aklt/plantuml-syntax'
 Plug 'tyru/open-browser.vim'
 Plug 'weirongxu/plantuml-previewer.vim'

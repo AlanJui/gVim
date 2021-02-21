@@ -33,7 +33,6 @@ source ~/.vim/config/markdown-preview.vim
 source ~/.vim/config/window-swap.vim
 source ~/.vim/config/float-term.vim
 source ~/.vim/config/echodoc.vim
-" source ~/.vim/config/plant-uml.vim
 source ~/.vim/config/plantuml-previewer.vim
 source ~/.vim/config/find-and-replace.vim
 
@@ -65,12 +64,24 @@ source ~/.vim/config/which-key.vim
 "==========================================================
 source ~/.vim/UI.vim
 
+" Theme Colors
 " source ~/.vim/config/color-theme-ccc.vim
-source ~/.vim/config/color-theme-solarized.vim
+if exists("&termguicolors") && exists("&winblend")
+    let g:neosolarized_termtrans=1
+    runtime ~/.vim/colors/solarized_true.vim
+    set termguicolors
+    set winblend=0
+    set wildoptions=pum
+    set pumblend=5
+else
+    " colorscheme gruvbox
+    set background=dark
+    colorscheme solarized8
+endif
 
 " Status line
-source ~/.vim/config/airline-theme.vim
 " source ~/.vim/config/light-line.vim
+source ~/.vim/config/airline-theme.vim
 
 "==========================================================
 " 其它設定
@@ -87,3 +98,4 @@ endif
 
 
 set exrc
+

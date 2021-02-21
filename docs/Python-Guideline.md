@@ -134,24 +134,20 @@ Python 3.9.1 (default, Feb  3 2021, 07:38:02)
 [Clang 12.0.0 (clang-1200.0.32.29)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> ^D
+```
 
-$ la ~/.pyenv/shims/python*
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:27 /Users/alanjui/.pyenv/shims/python
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:27 /Users/alanjui/.pyenv/shims/python-config
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:56 /Users/alanjui/.pyenv/shims/python2
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:56 /Users/alanjui/.pyenv/shims/python2-config
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:56 /Users/alanjui/.pyenv/shims/python2.7
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:56 /Users/alanjui/.pyenv/shims/python2.7-config
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:56 /Users/alanjui/.pyenv/shims/python2.7-gdb.py
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:27 /Users/alanjui/.pyenv/shims/python3
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:27 /Users/alanjui/.pyenv/shims/python3-config
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:27 /Users/alanjui/.pyenv/shims/python3.8
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:27 /Users/alanjui/.pyenv/shims/python3.8-config
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:27 /Users/alanjui/.pyenv/shims/python3.8-gdb.py
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:47 /Users/alanjui/.pyenv/shims/python3.9
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:47 /Users/alanjui/.pyenv/shims/python3.9-config
--rwxr-xr-x  1 alanjui  staff   408B  2 20 11:47 /Users/alanjui/.pyenv/shims/python3.9-gdb.py
+Python installed locally:
 
+```
+$ ls -l -d  ~/.pyenv/shims/python[0-9]
+-rwxr-xr-x  1 alanjui  staff  408  2 20 11:56 /Users/alanjui/.pyenv/shims/python2
+-rwxr-xr-x  1 alanjui  staff  408  2 20 11:27 /Users/alanjui/.pyenv/shims/python3
+
+$ ls -l -d ~/.pyenv/shims/python
+-rwxr-xr-x  1 alanjui  staff  408  2 20 11:27 /Users/alanjui/.pyenv/shims/python
+```
+
+```
 $ ~/.pyenv/shims/python
 Python 2.7.16 (default, Feb 20 2021, 11:55:00)
 [GCC Apple LLVM 12.0.0 (clang-1200.0.32.28)] on darwin
@@ -202,6 +198,30 @@ Ex:
 pyenv virtualenv 3.9.1 venv-3.9.1
 ```
 
+2. Configure VirtualEnv for Project
+
+```
+pyenv local <VirtualEnvName>
+```
+
+```
+$ cd ~/workspace/django/test-100
+
+$ pyenv virtualenv 3.9.1 venv-3.9.1
+Looking in links: /var/folders/36/6kwybs_92bj1_x96p67h7q8w0000gp/T/tmp67ulkd55
+Requirement already satisfied: setuptools in /Users/alanjui/.pyenv/versions/3.9.1/envs/venv-3.9.1/lib/python3.9/site-packages (49.2.1)
+Requirement already satisfied: pip in /Users/alanjui/.pyenv/versions/3.9.1/envs/venv-3.9.1/lib/python3.9/site-packages (20.2.3)
+
+$ pyenv local venv-3.9.1
+
+$pyenv versions
+  system
+  2.7.16
+  3.8.5
+  3.9.1
+  3.9.1/envs/venv-3.9.1
+* venv-3.9.1 (set by /Users/alanjui/workspace/django/test-100/.python-version)
+```
 
 ## Configure pip
 
@@ -299,3 +319,79 @@ drwxr-xr-x  45 alanjui  staff   1.4K  2 20 11:46 setuptools
 drwxr-xr-x  12 alanjui  staff   384B  2 20 11:46 setuptools-49.2.1.dist-info
 ```
 
+## Django Project
+
+1. Install package for projects
+
+```
+pip install -r requirements.txt
+```
+
+```
+$ cd ~/workspace/django/test-100
+
+$ pyenv version
+venv-3.9.1 (set by /Users/alanjui/workspace/django/test-100/.python-version)
+
+$ la ~/.pyenv/versions/3.9.1/envs/venv-3.9.1/lib/python3.9/site-packages
+total 8
+drwxr-xr-x   3 alanjui  staff    96B  2 20 21:12 __pycache__
+-rw-r--r--   1 alanjui  staff   126B  2 20 21:12 easy_install.py
+drwxr-xr-x   7 alanjui  staff   224B  2 20 21:12 pip
+drwxr-xr-x  10 alanjui  staff   320B  2 20 21:12 pip-20.2.3.dist-info
+drwxr-xr-x   6 alanjui  staff   192B  2 20 21:12 pkg_resources
+drwxr-xr-x  45 alanjui  staff   1.4K  2 20 21:12 setuptools
+drwxr-xr-x  12 alanjui  staff   384B  2 20 21:12 setuptools-49.2.1.dist-info
+
+$ pip install -r requirements.txt
+....
+
+$la ~/.pyenv/versions/3.9.1/envs/venv-3.9.1/lib/python3.9/site-packages
+total 616
+drwxr-xr-x  12 alanjui  staff   384B  2 20 21:53 Django-3.1.7.dist-info
+drwxr-xr-x   7 alanjui  staff   224B  2 20 21:53 __pycache__
+drwxr-xr-x  12 alanjui  staff   384B  2 20 21:53 asgiref
+drwxr-xr-x   9 alanjui  staff   288B  2 20 21:53 asgiref-3.3.1.dist-info
+drwxr-xr-x  30 alanjui  staff   960B  2 20 21:53 astroid
+drwxr-xr-x  10 alanjui  staff   320B  2 20 21:53 astroid-2.4.2.dist-info
+drwxr-xr-x  11 alanjui  staff   352B  2 20 21:53 autopep8-1.5.5.dist-info
+-rw-r--r--   1 alanjui  staff   148K  2 20 21:53 autopep8.py
+drwxr-xr-x  22 alanjui  staff   704B  2 20 21:53 django
+-rw-r--r--   1 alanjui  staff   126B  2 20 21:12 easy_install.py
+drwxr-xr-x  10 alanjui  staff   320B  2 20 21:53 greenlet
+drwxr-xr-x   9 alanjui  staff   288B  2 20 21:53 greenlet-1.0.0-py3.9.egg-info
+drwxr-xr-x  34 alanjui  staff   1.1K  2 20 21:53 isort
+drwxr-xr-x   9 alanjui  staff   288B  2 20 21:53 isort-5.7.0.dist-info
+drwxr-xr-x  10 alanjui  staff   320B  2 20 21:53 lazy_object_proxy
+drwxr-xr-x  10 alanjui  staff   320B  2 20 21:53 lazy_object_proxy-1.4.3.dist-info
+drwxr-xr-x  11 alanjui  staff   352B  2 20 21:53 mccabe-0.6.1.dist-info
+-rw-r--r--   1 alanjui  staff    10K  2 20 21:53 mccabe.py
+drwxr-xr-x   9 alanjui  staff   288B  2 20 21:53 msgpack
+drwxr-xr-x   7 alanjui  staff   224B  2 20 21:53 msgpack-1.0.2-py3.9.egg-info
+drwxr-xr-x   5 alanjui  staff   160B  2 20 21:53 neovim
+drwxr-xr-x  10 alanjui  staff   320B  2 20 21:53 neovim_remote-2.4.0.dist-info
+drwxr-xr-x   5 alanjui  staff   160B  2 20 21:53 nvr
+drwxr-xr-x   7 alanjui  staff   224B  2 20 21:54 pip
+drwxr-xr-x  10 alanjui  staff   320B  2 20 21:54 pip-21.0.1.dist-info
+drwxr-xr-x   6 alanjui  staff   192B  2 20 21:12 pkg_resources
+drwxr-xr-x  16 alanjui  staff   512B  2 20 21:53 psutil
+drwxr-xr-x   9 alanjui  staff   288B  2 20 21:53 psutil-5.8.0-py3.9.egg-info
+drwxr-xr-x  11 alanjui  staff   352B  2 20 21:53 pycodestyle-2.6.0.dist-info
+-rw-r--r--   1 alanjui  staff   101K  2 20 21:53 pycodestyle.py
+drwxr-xr-x  20 alanjui  staff   640B  2 20 21:53 pylint
+drwxr-xr-x  10 alanjui  staff   320B  2 20 21:53 pylint-2.6.2.dist-info
+drwxr-xr-x   9 alanjui  staff   288B  2 20 21:53 pynvim
+drwxr-xr-x   9 alanjui  staff   288B  2 20 21:53 pynvim-0.4.2-py3.9.egg-info
+drwxr-xr-x  10 alanjui  staff   320B  2 20 21:53 pytz
+drwxr-xr-x  12 alanjui  staff   384B  2 20 21:53 pytz-2021.1.dist-info
+drwxr-xr-x  45 alanjui  staff   1.4K  2 20 21:12 setuptools
+drwxr-xr-x  12 alanjui  staff   384B  2 20 21:12 setuptools-49.2.1.dist-info
+drwxr-xr-x   9 alanjui  staff   288B  2 20 21:53 six-1.15.0.dist-info
+-rw-r--r--   1 alanjui  staff    33K  2 20 21:53 six.py
+drwxr-xr-x  16 alanjui  staff   512B  2 20 21:53 sqlparse
+drwxr-xr-x  11 alanjui  staff   352B  2 20 21:53 sqlparse-0.4.1.dist-info
+drwxr-xr-x   8 alanjui  staff   256B  2 20 21:53 toml
+drwxr-xr-x   9 alanjui  staff   288B  2 20 21:53 toml-0.10.2.dist-info
+drwxr-xr-x   8 alanjui  staff   256B  2 20 21:53 wrapt
+drwxr-xr-x   7 alanjui  staff   224B  2 20 21:53 wrapt-1.12.1-py3.9.egg-info
+```
