@@ -332,17 +332,20 @@ cd ~/.local/share/lua-language-server
 6. Install
 
 Linux:
+
 ```
 mv ~/build/lua-language-server ~/.local/share/
-ln -s -f ~/.local/share/lua-language-server/bin/Linux/lua-language-server ~/.local/bin/lua-lsp
+cd ~/.local/share/lua-language-server/bin/Linux
+cp * ../
 ```
 
 macOS:
+
 ```
 mv ~/build/lua-language-server ~/.local/share/
-ln -s -f ~/.local/share/lua-language-server/bin/macOS/lua-language-server ~/.local/bin/lua-lsp
+cd ~/.local/share/lua-language-server/bin/macOS
+cp * ../
 ```
-
 
 ### Install lua language server support for vim
 
@@ -357,8 +360,11 @@ ln -s -f ~/.local/share/lua-language-server/bin/macOS/lua-language-server ~/.loc
 3. 設定 Lua Language Server Path
 
 ```
-nvim ~/.config/nvim/coc-settings.json
+:CocConfig
 ```
+
+【註】：等同 `nvim ~/.config/nvim/coc-settings.json` 或
+`vim ~/.vim/coc-settings.json` 。
 
 coc-settings.json
 
@@ -370,11 +376,42 @@ coc-settings.json
             ....
         },
         "lua": {
-            "command": "/home/alanjui/.local/share/lua-lsp/lua-language-server",
+            "command": "~/.local/share/lua-language-server/bin/lua-language-server",
+            "args": [
+              "-E",
+              "-e",
+              "LANG=en",
+              "~/.local/share/lua-language-server/main.lua"
+            ],
             "filetypes": ["lua"],
             "trace.server": "verbose"
         }
     },
     ....
 }
+```
+
+### Verify
+
+1. Editing source code
+
+```
+cd ~/.vim/lua
+vim testLua.lua
+```
+
+2. Run
+
+Presss key: <Space><a><t> to open a floating window for terminal.
+
+Entering commad below:
+
+```
+lua testLua.lua
+```
+
+Entering `exit` command to close terminal window and return to vim editor.
+
+```
+exit
 ```
