@@ -49,6 +49,7 @@ let g:which_key_map['/'] = [ ':call Comment()'                                 ,
 let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'file explorer' ]
+let g:which_key_map['f'] = [ ':Ranger'                                         , 'external file explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['o'] = [ ':Buffers'                                        , 'switch open files' ]
@@ -117,8 +118,8 @@ let g:which_key_map.d = {
       \ 's' : ['<Plug>VimspectorStop'                          , 'stop'],
       \ }
 
-" f is for find and replace
-let g:which_key_map.f = {
+" r is for find and replace
+let g:which_key_map.r = {
       \ 'name' : '+find & replace' ,
       \ 'f' : [':Farr --source=vimgrep'    , 'file'],
       \ 'p' : [':Farr --source=rgnvim'     , 'project'],
@@ -295,7 +296,8 @@ let g:which_key_map.t = {
       \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
-      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+      \ 'd' : [':FloatermNew django-admin shell'                , 'django-admin'],
+      \ 'D' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'n' : [':FloatermNew node'                              , 'node'],
       \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
       \ 'p' : [':FloatermNew python'                            , 'python'],
@@ -309,8 +311,9 @@ let g:which_key_map.t = {
 " u is for utilities
 let g:which_key_map.u = {
       \ 'name' : '+utility' ,
-      \ 'e' : [':CocCommand explorer'                           , 'explorer'],
-      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+      \ 'e' : [':CocCommand explorer'                           , 'file explorer'],
+      \ 'f' : [':Ranger'                                        , 'external file explorer'],
+      \ 'F' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'l' : [':Bracey'                                        , 'start live server'],
       \ 'L' : [':BraceyStop'                                    , 'stop live server'],
       \ 'r' : [':BraceyReload'                                  , 'reload live server'],
