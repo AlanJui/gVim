@@ -97,7 +97,7 @@ $ fc-list | grep "Hack"
 安裝 Plugin 相依之作業系統軟件
 
 ```
-$ sudo apt install ripgrep
+$ sudo pacman -S ripgrep
 
-$ sudo apt install fzf
+$ sudo pacman -S fzf
 ```
