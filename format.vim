@@ -69,7 +69,7 @@ autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " JavaScrip
 
 autocmd BufNewFile,BufRead *.js set filetype=javascript
-autocmd FileType javascript setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType javascript let b:comment_leader='//'
 
 
@@ -86,15 +86,6 @@ autocmd FileType typescript.tsx let b:comment_leader='//'
 
 
 "--------------------------------------------------------------
-" JSON
-
-autocmd FileType json setlocal expandtab shiftwidth=4 softtabstop=4
-
-autocmd FileType jsonc setlocal expandtab shiftwidth=4 softtabstop=4
-autocmd FileType jsonc let b:comment_leader='//'
-
-
-"--------------------------------------------------------------
 " CSS
 
 autocmd BufNewFile,BufRead *.css,*.scss set filetype=css
@@ -105,7 +96,6 @@ autocmd FileType css let b:comment_leader='/*'
 
 "--------------------------------------------------------------
 " Python
-
 
 " autocmd BufNewFile,BufRead *.py set filetype=python.django
 autocmd BufNewFile,BufRead *.py set filetype=python

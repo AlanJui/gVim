@@ -68,6 +68,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'chr4/nginx.vim'
 
 " Syntax for json with comments
+Plug 'elzr/vim-json'
 Plug 'neoclide/jsonc.vim'
 
 " Syntax highlighting for javascript libraries

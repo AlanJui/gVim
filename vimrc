@@ -46,6 +46,11 @@ source ~/.vim/global.vim
 "==========================================================
 source ~/.vim/format.vim
 
+" Fix conflicts with indentLine and vim-json
+let g:vim_json_syntax_conceal=0
+let g:indentLine_noConcealCursor=""
+let g:indentLine_noConcealCursor="nc"
+
 "==========================================================
 " COC-NVIM 配合環境
 "==========================================================
