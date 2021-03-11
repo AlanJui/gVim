@@ -70,19 +70,7 @@ source ~/.vim/config/which-key.vim
 source ~/.vim/UI.vim
 
 " Theme Colors
-" source ~/.vim/config/color-theme-ccc.vim
-if exists("&termguicolors") && exists("&winblend")
-    let g:neosolarized_termtrans=1
-    runtime ~/.vim/colors/solarized_true.vim
-    set termguicolors
-    set winblend=0
-    set wildoptions=pum
-    set pumblend=5
-else
-    " colorscheme gruvbox
-    set background=dark
-    colorscheme solarized8
-endif
+source ~/.vim/config/color-theme-ccc.vim
 
 " Status line
 " source ~/.vim/config/light-line.vim
