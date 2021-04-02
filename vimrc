@@ -13,6 +13,15 @@ let g:mapleader = ","
 au FocusGained,BufEnter * :silent! checktime
 au FocusLost,WinLeave * :silent! w
 
+" bash-language-server
+if executable('bash-language-server')
+  au User lsp_setup call lsp#register_server({
+        \ 'name': 'bash-language-server',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
+        \ 'allowlist': ['sh'],
+        \ })
+endif
+
 "===========================================================
 " 擴充套件(Plugins)
 "===========================================================
