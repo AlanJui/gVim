@@ -21,8 +21,10 @@ call plug#begin('~/.vim/plugged')
 "------------------------------------------------------------
 " 編輯
 
-" Auto-complete (Intellisense Engine)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+if has('nvim')
+    " Auto-complete (Intellisense Engine)
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
 
 " Or build from source code by using yarn: https://yarnpkg.com
 " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}

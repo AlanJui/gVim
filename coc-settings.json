@@ -76,6 +76,7 @@
 
   // Python: https://github.com/neoclide/coc-python
   "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Args": ["--ignore=E402"],
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "python.linting.pylintArgs": ["--disable=F401, E722, C0116, C0115, W0613"],

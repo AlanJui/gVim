@@ -63,8 +63,10 @@ let g:indentLine_noConcealCursor="nc"
 "==========================================================
 " COC-NVIM 配合環境
 "==========================================================
-source ~/.vim/coc-nvim.vim
-source ~/.vim/config/coc-explorer.vim
+if has('nvim')
+    source ~/.vim/coc-nvim.vim
+    source ~/.vim/config/coc-explorer.vim
+endif
 
 "==========================================================
 " 快速鍵設定
