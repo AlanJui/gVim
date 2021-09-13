@@ -48,17 +48,22 @@ let g:which_key_map['.'] = [ ':e $MYVIMRC'                                     ,
 let g:which_key_map['/'] = [ ':call Comment()'                                 , 'comment' ]
 let g:which_key_map[';'] = [ ':Commands'                                       , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                                          , 'balance windows' ]
-let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'file explorer' ]
 let g:which_key_map['E'] = [ ':FloatermNew vifm'                               , 'ViFm file explorer' ]
 let g:which_key_map['f'] = [ ':Ranger'                                         , 'external file explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['o'] = [ ':Buffers'                                        , 'switch open files' ]
 let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
-let g:which_key_map['q'] = [ '<Plug>(coc-fix-current)'                         , 'quickfix' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'                                 , 'undo tree']
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
 let g:which_key_map['w'] = [ ':call WindowSwap#EasyWindowSwap()'               , 'swap window' ]
+if has('nvim')
+    let g:which_key_map['q'] = [ '<Plug>(coc-fix-current)'                         , 'quickfix' ]
+    let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'file explorer' ]
+else
+    let g:which_key_map['e'] = [ ':NERDTreeToggle'   ,                          'file explorer' ]
+endif
+
 
 " Group mappings
 

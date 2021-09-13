@@ -29,6 +29,11 @@ endif
 source ~/.vim/plugins.vim
 
 " 擴充套件設定（Configuration of Plugins)
+if has('nvim')
+    source ~/.vim/config/defx.rc.vim
+else
+    source ~/.vim/config/nerdtree.rc.vim
+endif
 source ~/.vim/config/ranger.vim
 source ~/.vim/config/fzf.vim
 source ~/.vim/config/surround.vim

@@ -80,6 +80,12 @@ Plug 'othree/javascript-libraries-syntax.vim'
 "------------------------------------------------------------
 " 檔案操作
 
+if has('nvim')
+    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'preservim/nerdtree'
+endif
+
 " Denite - Fuzzy finding, buffer management
 " Plug 'Shougo/denite.nvim'
 " Plug 'roxma/nvim-yarp'
@@ -111,6 +117,7 @@ Plug 'wesQ3/vim-windowswap'
 
 " Add file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline
 Plug 'ryanoasis/vim-devicons'
+Plug 'kristijanhusak/defx-icons'
 
 " Color Scheme: Support True Color
 Plug 'lifepillar/vim-solarized8'

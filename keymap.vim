@@ -10,18 +10,21 @@ let mapleader = ","
 " 設定檔作業
 
 " 編輯設定檔
+nmap <Leader>cI :source ~/.vim/init.vim<CR>
 nmap <Leader>ci :e ~/.vim/vimrc<CR>
 nmap <Leader>cg :e ~/.vim/global.vim<CR>
 nmap <Leader>cf :e ~/.vim/format.vim<CR>
 nmap <Leader>ck :e ~/.vim/keymap.vim<CR>
 nmap <Leader>cp :e ~/.vim/plugins.vim<CR>
-nmap <Leader>cv :e ~/.vim/coc-nvim.vim<CR>
-nmap <Leader>cj :e ~/.vim/coc-settings.json<CR>
-nmap <Leader>cI :source ~/.vim/init.vim<CR>
+if has('nvim')
+    nmap <Leader>cv :e ~/.vim/coc-nvim.vim<CR>
+    nmap <Leader>cj :e ~/.vim/coc-settings.json<CR>
+endif
 
 " 依據設定檔重啟設定
 nmap <Leader>i :e ~/.vim/vimrc<CR>
 nmap <Leader>I :source ~/.vim/vimrc<CR>
+nmap <C-r><C-r> :source ~/.vim/vimrc<CR>
 
 
 "--------------------------------------------------------------
@@ -39,11 +42,11 @@ nnoremap <Leader>w\| <C-W>v		" 遊標所在視窗做垂直切割
 
 " 調整視窗的寬度／高度
 " 指令：resize (res)
-" 水平調整格式： 
+" 水平調整格式：
 "  (1) :res 60
 "  (2) :res +5
 "  (3) :res -5
-" 垂直調整格式： 
+" 垂直調整格式：
 "  (1) :vertical res 60
 "  (2) :vertical res +5
 "  (3) :vertical res -5
@@ -218,8 +221,8 @@ cmap w!! w !sudo tee %
 
 
 " 退出 Vim
-noremap <C-q> :quit<CR>  
-noremap <C-Q> :qa!<CR>   
+noremap <C-q> :quit<CR>
+noremap <C-Q> :qa!<CR>
 
 
 " === Search shorcuts === "

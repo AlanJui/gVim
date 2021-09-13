@@ -28,6 +28,14 @@ set encoding=UTF-8
 
 set mouse=a
 
+"--------------------------------------------------------------
+" 行號
+
+"set number
+set relativenumber
+set numberwidth=2
+set cpoptions+=n
+
 
 "--------------------------------------------------------------
 " 檔案作業
@@ -58,23 +66,23 @@ set scrolloff=3
 
 "--------------------------------------------------------------
 " 狀態列（Status Line）
-  
+
 " Better display for messages
 set cmdheight=2
 
 " Don't show last command
 set noshowcmd
 
-" Don't show Insert/Command Mode 
+" Don't show Insert/Command Mode
 set noshowmode
 " set showmode
 
 " Show matching brackets.
-set showmatch               
+set showmatch
 
 " Show key pressed on status line
 set showcmd
 
-" 執行時不重繪 
+" 執行時不重繪
 set nolazyredraw
 
