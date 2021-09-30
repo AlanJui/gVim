@@ -36,6 +36,7 @@ Plug 'https://github.com/andys8/vscode-jest-snippets.git'
 " Auto-pairs
 Plug 'jiangmiao/auto-pairs/'
 Plug 'tpope/vim-surround'
+Plug 'alvan/vim-closetag'
 
 " Multiple cursor editting
 Plug 'terryma/vim-multiple-cursors'

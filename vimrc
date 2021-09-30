@@ -49,6 +49,7 @@ source ~/.vim/config/float-term.vim
 source ~/.vim/config/echodoc.vim
 source ~/.vim/config/plantuml-previewer.vim
 source ~/.vim/config/find-and-replace.vim
+source ~/.vim/config/vim-closetag.vim
 
 "===========================================================
 " Vim 通用設定
