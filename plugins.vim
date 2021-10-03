@@ -121,8 +121,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'kristijanhusak/defx-icons'
 
 " Color Scheme: Support True Color
-Plug 'lifepillar/vim-solarized8'
-Plug 'morhetz/gruvbox'
+" Plug 'lifepillar/vim-solarized8'
+" Plug 'morhetz/gruvbox'
 
 " Customized vim status line
 Plug 'vim-airline/vim-airline'

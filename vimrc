@@ -106,6 +106,11 @@ if has("unix")
   endif
 endif
 
+set relativenumber
+set number
+
+set numberwidth=2
+set cpoptions+=n
 
 set exrc
 
