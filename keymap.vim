@@ -162,6 +162,8 @@ nnoremap Y y$
 nnoremap H ^									" 游標移到行頭
 nnoremap L $									" 游標移到行尾
 
+nnoremap X d$									" Del characters from cursor to end of line
+
 
 " 搬移文字(Move Line)
 nnoremap <S-DOWN> :m .+1<CR>==

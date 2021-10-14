@@ -2,8 +2,16 @@
 " 佈景、配色與字體
 
 syntax enable
-if (has("termguicolors"))
-    set termguicolors
+
+" Support alacritty terminal
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+else
+  if (has("termguicolors"))
+      set termguicolors
+  endif
 endif
 
 try
@@ -11,6 +19,7 @@ try
 catch
   colorscheme gruvbox
 endtry
+let g:airline_theme='papercolor'
 
 " "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 " "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
