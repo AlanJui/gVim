@@ -29,6 +29,9 @@ endif
 " Or build from source code by using yarn: https://yarnpkg.com
 " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
+" System clipboard support
+Plug 'christoomey/vim-system-copy'
+
 " Snippets support
 Plug 'honza/vim-snippets'
 Plug 'https://github.com/andys8/vscode-jest-snippets.git'

@@ -4,7 +4,7 @@
 
 " 與作業系統共用 Clipboard
 " 欲將系統剪貼簿的內容貼入 Vim 前，需先按 <F2> 鍵。
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 set undolevels=700
 set history=1000

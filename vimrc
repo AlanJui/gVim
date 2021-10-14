@@ -106,12 +106,8 @@ if has("unix")
   endif
 endif
 
-set relativenumber
-set number
+" set exrc
 
-set numberwidth=2
-set cpoptions+=n
-
-set exrc
-
-
+" Display Linue Number
+" set numberwidth=6
+set number relativenumber

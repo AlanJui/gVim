@@ -235,4 +235,6 @@ map <leader>s :%s///<left><left>
 " 清除搜尋完後的醒目提示
 nmap <silent> <leader>S :nohlsearch<CR>
 
-
+" vim-system-copy
+map <C-c> cp
+map <C-v> cv
