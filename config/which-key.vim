@@ -72,7 +72,7 @@ let g:which_key_map.a = {
       \ 'name' : '+actions' ,
       \ 'h' : [':let @/ = ""'            , 'remove search highlight'],
       \ 'l' : [':set wrap!'              , 'on/off line wrap'],
-      \ 'n' : [':set nonumber!'          , 'on/off line-numbers'],
+      \ 'n' : [':set nu! rnu!'           , 'on/off line-numbers'],
       \ 'N' : [':set norelativenumber!'  , 'on/off relative line-numbers'],
       \ 's' : [':s/\%V\(.*\)\%V/"\1"/'   , 'surround'],
       \ 'r' : [':set norelativenumber!'  , 'relative line nums'],

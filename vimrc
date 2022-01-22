@@ -108,6 +108,3 @@ endif
 
 " set exrc
 
-" Display Linue Number
-" set numberwidth=6
-set number relativenumber

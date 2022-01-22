@@ -27,14 +27,20 @@ set nocompatible            " Disable compatibility to old-time vi
 set encoding=UTF-8
 
 set mouse=a
+set cursorline
 
 "--------------------------------------------------------------
-" 行號
+" Line editing
+
+" Disable line wrap
+set textwidth=0
+set wrapmargin=0
+set nowrap
 
 "set number
-set relativenumber
-set numberwidth=2
-set cpoptions+=n
+set number relativenumber
+set numberwidth=4
+" set cpoptions+=n
 
 
 "--------------------------------------------------------------
@@ -86,3 +92,11 @@ set showcmd
 " 執行時不重繪
 set nolazyredraw
 
+" Tabs
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
+" File format
+autocmd FileType vim setlocal expandtab shiftwidth=4 tabstop=4 smartindent
+autocmd BufEnter *.vim set autoindent expandtab shiftwidth=4 tabstop=4
