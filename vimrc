@@ -87,7 +87,20 @@ source ~/.vim/config/which-key.vim
 source ~/.vim/UI.vim
 
 " Theme Colors
-source ~/.vim/config/color-theme-ccc.vim
+if $TERM_PROGRAM == "Apple_Terminal"
+    set notermguicolors
+ 
+    try
+        colorscheme OceanicNext
+    catch
+        colorscheme gruvbox
+    endtry
+ 
+    let g:airline_theme='oceanicnext'
+
+else
+    source ~/.vim/config/color-theme-ccc.vim
+endif
 
 " Status line
 " source ~/.vim/config/light-line.vim
@@ -107,4 +120,25 @@ if has("unix")
 endif
 
 " set exrc
+
+" Don't convert tab to spaces
+" set tabstop=4
+" set expandtab
+" set list!
+" if has('gui_running')
+"     set listchars=tab:▶\ ,trail:·,extends:\#,nbsp:.
+" else
+"     set listchars=tab:>.,trail:.,extends:\#,nbsp:.
+" endif
+
+
+" set tabstop=4
+" set et!
+" set expandtab!
+set noexpandtab
+setlocal list
+set listchars=tab:▷▷,trail:.
+" Highlight tabs as errors.
+" https://vi.stackexchange.com/a/9353/3168
+match Error /\t/
 

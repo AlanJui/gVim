@@ -34,13 +34,19 @@ set tabstop=4
 " set backspace=2
 set backspace=start,eol,indent
 
+" --- 自動去除不必要的空白 ---
+" highlight BadWhitespace ctermbg=red guibg=darkred
+"
+" autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /^\t\+/
+" autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
 " 標示多餘空白【務必放在 ColorScheme 設定之前】
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+" autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Automatically removing all trailing whitespace
-autocmd BufWritePre * %s/\s\+$//e
-autocmd FileType py,html,htmldjango,javascript,css autocmd BufWritePre <buffer> %s/\s\+$//e
+" autocmd BufWritePre * %s/\s\+$//e
+" autocmd FileType py,html,htmldjango,javascript,css autocmd BufWritePre <buffer> %s/\s\+$//e
 
 
 " 不同 filetype 擁有各自的 "內縮設定" ，如： Python 為4空格；HTML則為2空格
@@ -58,12 +64,6 @@ autocmd FileType vim let b:comment_leader='"'
 
 " 在 Insert Mode 可用 《BS》鍵
 set backspace=indent,eol,start
-
-" --- 自動去除不必要的空白 ---
-highlight BadWhitespace ctermbg=red guibg=darkred
-
-autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /^\t\+/
-autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "--------------------------------------------------------------
 " JavaScrip
