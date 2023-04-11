@@ -16,10 +16,6 @@ nmap <Leader>cg :e ~/.vim/global.vim<CR>
 nmap <Leader>cf :e ~/.vim/format.vim<CR>
 nmap <Leader>ck :e ~/.vim/keymap.vim<CR>
 nmap <Leader>cp :e ~/.vim/plugins.vim<CR>
-if has('nvim')
-    nmap <Leader>cv :e ~/.vim/coc-nvim.vim<CR>
-    nmap <Leader>cj :e ~/.vim/coc-settings.json<CR>
-endif
 
 " 依據設定檔重啟設定
 nmap <Leader>i :e ~/.vim/vimrc<CR>

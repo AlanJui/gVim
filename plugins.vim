@@ -21,11 +21,6 @@ call plug#begin('~/.vim/plugged')
 "------------------------------------------------------------
 " 編輯
 
-if has('nvim')
-    " Auto-complete (Intellisense Engine)
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-endif
-
 " Auto-complete (Intellisense Engine)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 

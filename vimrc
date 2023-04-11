@@ -15,11 +15,11 @@ au FocusLost,WinLeave * :silent! w
 
 " bash-language-server
 if executable('bash-language-server')
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'bash-language-server',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
-        \ 'allowlist': ['sh'],
-        \ })
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'bash-language-server',
+                \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
+                \ 'allowlist': ['sh'],
+                \ })
 endif
 
 "===========================================================
@@ -65,7 +65,8 @@ let g:indentLine_noConcealCursor="nc"
 "==========================================================
 " COC-NVIM 配合環境
 "==========================================================
-source ~/.vim/coc-nvim.vim
+" source ~/.vim/coc-nvim.vim
+source ~/.vim/my-coc-config.vim
 source ~/.vim/config/coc-explorer.vim
 
 "==========================================================
@@ -83,13 +84,13 @@ source ~/.vim/UI.vim
 " Theme Colors
 if $TERM_PROGRAM == "Apple_Terminal"
     set notermguicolors
- 
+
     try
         colorscheme OceanicNext
     catch
         colorscheme gruvbox
     endtry
- 
+
     let g:airline_theme='oceanicnext'
 
 else
@@ -106,11 +107,11 @@ source ~/.vim/config/airline-theme.vim
 source ~/.vim/Misc.vim
 
 if has("unix")
-  let s:uname = system("uname -s")
-  " Do Mac stuff
-  if s:uname == "Darwin\n"
-    source ~/.vim/vimrc.osx
-  endif
+    let s:uname = system("uname -s")
+    " Do Mac stuff
+    if s:uname == "Darwin\n"
+        source ~/.vim/vimrc.osx
+    endif
 endif
 
 " set exrc
@@ -126,9 +127,9 @@ endif
 " endif
 
 
-" set tabstop=4
-" set et!
-" set expandtab!
+set tabstop=4
+set et!
+set expandtab!
 set noexpandtab
 " setlocal list
 " set listchars=tab:▷▷,trail:.
