@@ -26,6 +26,9 @@ if has('nvim')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
+" Auto-complete (Intellisense Engine)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Or build from source code by using yarn: https://yarnpkg.com
 " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
@@ -160,6 +163,7 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 
 " Markdown syntax highlighting and filetype plugins for markdown
 Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 

@@ -29,11 +29,7 @@ endif
 source ~/.vim/plugins.vim
 
 " 擴充套件設定（Configuration of Plugins)
-if has('nvim')
-    source ~/.vim/config/defx.rc.vim
-else
-    source ~/.vim/config/nerdtree.rc.vim
-endif
+source ~/.vim/config/nerdtree.rc.vim
 source ~/.vim/config/ranger.vim
 source ~/.vim/config/fzf.vim
 source ~/.vim/config/surround.vim
@@ -69,10 +65,8 @@ let g:indentLine_noConcealCursor="nc"
 "==========================================================
 " COC-NVIM 配合環境
 "==========================================================
-if has('nvim')
-    source ~/.vim/coc-nvim.vim
-    source ~/.vim/config/coc-explorer.vim
-endif
+source ~/.vim/coc-nvim.vim
+source ~/.vim/config/coc-explorer.vim
 
 "==========================================================
 " 快速鍵設定
@@ -136,9 +130,11 @@ endif
 " set et!
 " set expandtab!
 set noexpandtab
-setlocal list
-set listchars=tab:▷▷,trail:.
+" setlocal list
+" set listchars=tab:▷▷,trail:.
 " Highlight tabs as errors.
 " https://vi.stackexchange.com/a/9353/3168
-match Error /\t/
+" match Error /\t/
 
+" To use fzf in Vim
+set rtp+=/usr/local/opt/fzf

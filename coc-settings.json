@@ -6,7 +6,7 @@
   "explorer.file.root.template": "[icon] [git] [hidden & 1] PROJECT ([root])",
   "explorer.file.child.template": "[git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
   "explorer.icon.enableNerdfont": true,
-  "explorer.icon.enableVimDevicons": true,
+  "explorer.icon.source": "vim-devicons",
   "explorer.previewAction.onHover": false,
   "explorer.file.showHiddenFiles": false,
   "explorer.keyMappings.global": {
@@ -23,26 +23,7 @@
   },
 
   // Auto format
-  "coc.preferences.formatOnSaveFiletypes": [
-    "python",
-    "python.django",
-    "html",
-    "htmldjango",
-    "django-html",
-    "css",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "typescript.tsx",
-    "graphql",
-    "yaml",
-    "json",
-    "jsonc",
-    "lua",
-    "markdown"
-  ],
-
+  "coc.preferences.formatOnSave": true,
   // snippets
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
   "snippets.loadFromExtensions": true,
@@ -64,7 +45,6 @@
     "javascript": "javascriptreact"
   },
 
-  "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
   "suggest.noselect": false,
 
@@ -95,8 +75,6 @@
   // "python.venvPath": "/Users/alanjui/.pyenv/versions/3.9.1/envs",
   // "python.venvFolders": ["venv-3.9.1", ".venv", "venv"],
   "pyright.disableCompletion": false,
-  "pyright.disableLanguageServices": false,
-  "pyright.disableOrganizeImports": false,
 
   // Language Servers
   "languageserver": {
@@ -107,15 +85,9 @@
       "ignoredRootPaths": ["~"]
     },
     "lua": {
-      "command": "~/.local/share/lua-language-server/bin/lua-language-server",
-      "args": [
-        "-E",
-        "-e",
-        "LANG=en",
-        "~/.local/share/lua-language-server/main.lua"
-      ],
+      "command": "/usr/local/bin/lua-language-server",
       "filetypes": ["lua"],
-      "trace.server": "verbose"
+      "rootPatterns": [".git/"]
     }
   }
 }
