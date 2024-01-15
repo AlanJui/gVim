@@ -82,12 +82,10 @@
       "command": "bash-language-server",
       "args": ["start"],
       "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
     },
     "lua": {
-      "command": "/usr/local/bin/lua-language-server",
+      "command": "lua-lsp",
       "filetypes": ["lua"],
-      "rootPatterns": [".git/"]
     }
   }
 }
