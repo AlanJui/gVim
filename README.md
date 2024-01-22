@@ -6,6 +6,7 @@
    - git
    - Node.js (node, npm, yarn)
    - Markdown-Previewer (instant-markdown-d)
+   - Bash Language Server
 
 2. 下載設定檔。
 
@@ -62,8 +63,14 @@ git push -u origin main
     $ npm install -g yarn
    ```
 
-### Markdown Previewer
+### 安裝 Markdown 檔案預覽工具
 
 ```sh
 npm install -g instant-markdown-d
+```
+
+### 安裝 Shell Script 用 Language Server
+
+```sh
+npm install -g bash-language-server
 ```
