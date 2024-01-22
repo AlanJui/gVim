@@ -64,6 +64,7 @@ let g:indentLine_noConcealCursor="nc"
 
 "==========================================================
 " COC-NVIM 配合環境
+" https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash
 "==========================================================
 " source ~/.vim/coc-nvim.vim
 source ~/.vim/my-coc-config.vim

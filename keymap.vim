@@ -232,5 +232,7 @@ map <leader>s :%s///<left><left>
 nmap <silent> <leader>S :nohlsearch<CR>
 
 " vim-system-copy
-" map <C-c> cp
-" map <C-v> cv
+map <C-c> cp
+map <C-v> cv
+map <leader>y "*y
+map <leader>p "*p

@@ -1,7 +1,69 @@
 # 專案指引
 
-個人 vim8 設定組態。
+## 安裝作業
+
+1. 備妥相關軟體。
+   - git
+   - Node.js (node, npm, yarn)
+   - Markdown-Previewer (instant-markdown-d)
+
+2. 下載設定檔。
+
+```sh
+git clone git@github.com:AlanJui/vim8.git ~/.vim
+```
+
+3. 執行軟體。
+
+```sh
+vim
+```
+
 
 ```
 git push -u origin main
+```
+
+## 安裝輔助套件
+
+### 安裝 Node.js 作業平台
+
+1. 安裝 n (Node.js) 直譯器版本管理器
+
+   ```sh
+    curl -L https://bit.ly/n-install | bash -s -- -y
+    ```
+
+2. 重啟 SHELL 設定
+   
+   ```sh
+   source ~/.bashrc
+   ```
+
+3. 安裝 Node.js, npm 軟體套件
+
+   ```sh
+   n lts
+   ```
+ 
+4. 檢驗設定結果
+
+   ```sh
+   $ node -v
+   v20.10.0
+
+
+   $ npm -v
+   10.2.3
+   ```
+
+5. 安裝 yarn 軟體套件
+   ```sh
+    $ npm install -g yarn
+   ```
+
+### Markdown Previewer
+
+```sh
+npm install -g instant-markdown-d
 ```
