@@ -6,9 +6,10 @@ let mapleader = ","
 
 
 " coc extensions
+" let g:coc_global_extensions = []
 let g:coc_global_extensions = [
-\ 'coc-lua-lsp',
-\ 'coc-bash-language-server',
+\ 'coc-lua',
+\ 'coc-sh',
 \ 'coc-explorer',
 \ 'coc-syntax',
 \ 'coc-prettier',
@@ -23,13 +24,12 @@ let g:coc_global_extensions = [
 \ 'coc-html',
 \ 'coc-docker',
 \ 'coc-yaml',
-\ 'coc-sh',
 \ 'coc-json',
 \ 'coc-xml',
 \ 'coc-yank',
 \ 'coc-pyright',
+\ 'coc-python',
 \ ]
-" \ 'coc-python',
 
 
 "--------------------------------------------------------------

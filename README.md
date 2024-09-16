@@ -3,6 +3,7 @@
 ## 安裝作業
 
 1. 備妥相關軟體。
+
    - git
    - Node.js (node, npm, yarn)
    - Markdown-Previewer (instant-markdown-d)
@@ -11,18 +12,13 @@
 2. 下載設定檔。
 
 ```sh
-git clone git@github.com:AlanJui/vim8.git ~/.vim
+git clone git@github.com:AlanJui/vim8.git  %USERPROFILE%\vimfiles
 ```
 
 3. 執行軟體。
 
 ```sh
 vim
-```
-
-
-```
-git push -u origin main
 ```
 
 ## 安裝輔助套件
@@ -33,10 +29,10 @@ git push -u origin main
 
    ```sh
     curl -L https://bit.ly/n-install | bash -s -- -y
-    ```
+   ```
 
 2. 重啟 SHELL 設定
-   
+
    ```sh
    source ~/.bashrc
    ```
@@ -46,7 +42,7 @@ git push -u origin main
    ```sh
    n lts
    ```
- 
+
 4. 檢驗設定結果
 
    ```sh
@@ -67,10 +63,4 @@ git push -u origin main
 
 ```sh
 npm install -g instant-markdown-d
-```
-
-### 安裝 Shell Script 用 Language Server
-
-```sh
-npm install -g bash-language-server
 ```

@@ -28,14 +28,15 @@
   // Auto format
   "coc.preferences.formatOnSave": true,
   // snippets
-  "snippets.userSnippetsDirectory": "C:\Users\AlanJui\vimfilesg\nvim\snips",
+  "snippets.userSnippetsDirectory": "C:\\Users\\AlanJui\\vimfiles\\snips",
   "snippets.loadFromExtensions": true,
   "snippets.ultisnips.enable": true,
   "snippets.snipmate.enable": false,
   // VS Code snippets
   //  - Ubuntu:  "C:\Users\AlanJui\vimfilesg\Code/User/snippets"
   //  - macOS:   "~/Library/Application Support/Code/User/snippets"
-  "snippets.textmateSnippetsRoots": ["C:\Users\AlanJui\vimfilesg\nvim\snips"
+  "snippets.textmateSnippetsRoots": [
+    "C:\\Users\\AlanJui\\vimfiles\\snips"
   ],
   // emmet
   "emmet.showExpandedAbbreviation": "always",
@@ -81,13 +82,5 @@
   // "python.venvPath": "/Users/alanjui/.pyenv/versions/3.9.1/envs",
   // "python.venvFolders": ["venv-3.9.1", ".venv", "venv"],
   "pyright.disableCompletion": false,
-  // Language Servers
-  "languageserver": {
-    "lua": {
-      "command": "lua-lsp",
-      "filetypes": [
-        "lua"
-      ],
-    },
-  }
+  "snippets.ultisnips.pythonPrompt": false
 }
