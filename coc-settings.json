@@ -10,7 +10,11 @@
   "explorer.previewAction.onHover": false,
   "explorer.file.showHiddenFiles": false,
   "explorer.keyMappings.global": {
-    "<cr>": ["expandable?", "expand", "open"],
+    "<cr>": [
+      "expandable?",
+      "expand",
+      "open"
+    ],
     "h": "open:split",
     "v": "open:vsplit",
     "mm": "rename",
@@ -21,19 +25,18 @@
     "ma": "addFile",
     "mA": "addDirectory"
   },
-
   // Auto format
   "coc.preferences.formatOnSave": true,
   // snippets
-  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+  "snippets.userSnippetsDirectory": "C:\Users\AlanJui\vimfilesg\nvim\snips",
   "snippets.loadFromExtensions": true,
   "snippets.ultisnips.enable": true,
   "snippets.snipmate.enable": false,
   // VS Code snippets
-  //  - Ubuntu:  "~/.config/Code/User/snippets"
+  //  - Ubuntu:  "C:\Users\AlanJui\vimfilesg\Code/User/snippets"
   //  - macOS:   "~/Library/Application Support/Code/User/snippets"
-  "snippets.textmateSnippetsRoots": ["~/.config/nvim/snips"],
-
+  "snippets.textmateSnippetsRoots": ["C:\Users\AlanJui\vimfilesg\nvim\snips"
+  ],
   // emmet
   "emmet.showExpandedAbbreviation": "always",
   "emmet.showAbbreviationSuggestions": true,
@@ -44,29 +47,32 @@
     "vue-html": "html",
     "javascript": "javascriptreact"
   },
-
   "suggest.maxCompleteItemCount": 20,
   "suggest.noselect": false,
-
   // diagnostics
   "diagnostic.errorSign": " ",
   "diagnostic.warningSign": " ",
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
-
   // Python: https://github.com/neoclide/coc-python
   "python.formatting.provider": "autopep8",
-  "python.formatting.autopep8Args": ["--ignore=E402"],
+  "python.formatting.autopep8Args": [
+    "--ignore=E402"
+  ],
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-  "python.linting.pylintArgs": ["--disable=F401, E722, C0116, C0115, W0613"],
+  "python.linting.pylintArgs": [
+    "--disable=F401, E722, C0116, C0115, W0613"
+  ],
   "python.linting.mypyArgs": [
     "--ignore-missing-imports",
     "--follow-imports=silent",
     "--show-column-numbers"
   ],
-  "python.linting.ignorePatterns": [".vscode/*.py", "**/site-packages/**/*.py"],
-
+  "python.linting.ignorePatterns": [
+    ".vscode/*.py",
+    "**/site-packages/**/*.py"
+  ],
   // coc-pyright
   // "python.analysis.autoImportCompletions": true,
   // "python.analysis.autoSearchPaths": true,
@@ -75,17 +81,13 @@
   // "python.venvPath": "/Users/alanjui/.pyenv/versions/3.9.1/envs",
   // "python.venvFolders": ["venv-3.9.1", ".venv", "venv"],
   "pyright.disableCompletion": false,
-
   // Language Servers
   "languageserver": {
-    "bash": {
-      "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-    },
     "lua": {
       "command": "lua-lsp",
-      "filetypes": ["lua"],
+      "filetypes": [
+        "lua"
+      ],
     },
   }
 }

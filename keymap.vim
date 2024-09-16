@@ -10,17 +10,17 @@ let mapleader = ","
 " 設定檔作業
 
 " 編輯設定檔
-nmap <Leader>cI :source ~/.vim/init.vim<CR>
-nmap <Leader>ci :e ~/.vim/vimrc<CR>
-nmap <Leader>cg :e ~/.vim/global.vim<CR>
-nmap <Leader>cf :e ~/.vim/format.vim<CR>
-nmap <Leader>ck :e ~/.vim/keymap.vim<CR>
-nmap <Leader>cp :e ~/.vim/plugins.vim<CR>
+nmap <Leader>cI :source C:\Users\AlanJui\vimfilesg\init.vim<CR>
+nmap <Leader>ci :e C:\Users\AlanJui\vimfilesg\vimrc<CR>
+nmap <Leader>cg :e C:\Users\AlanJui\vimfilesg\global.vim<CR>
+nmap <Leader>cf :e C:\Users\AlanJui\vimfilesg\format.vim<CR>
+nmap <Leader>ck :e C:\Users\AlanJui\vimfilesg\keymap.vim<CR>
+nmap <Leader>cp :e C:\Users\AlanJui\vimfilesg\plugins.vim<CR>
 
 " 依據設定檔重啟設定
-nmap <Leader>i :e ~/.vim/vimrc<CR>
-nmap <Leader>I :source ~/.vim/vimrc<CR>
-nmap <C-r><C-r> :source ~/.vim/vimrc<CR>
+nmap <Leader>i :e C:\Users\AlanJui\vimfilesg\vimrc<CR>
+nmap <Leader>I :source C:\Users\AlanJui\vimfilesg\vimrc<CR>
+nmap <C-r><C-r> :source C:\Users\AlanJui\vimfilesg\vimrc<CR>
 
 
 "--------------------------------------------------------------
