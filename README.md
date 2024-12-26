@@ -7,7 +7,6 @@
    - git
    - Node.js (node, npm, yarn)
    - Markdown-Previewer (instant-markdown-d)
-   - Bash Language Server
 
 2. 下載設定檔。
 

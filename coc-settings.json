@@ -55,32 +55,68 @@
   "diagnostic.warningSign": " ",
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
-  // Python: https://github.com/neoclide/coc-python
-  "python.formatting.provider": "autopep8",
-  "python.formatting.autopep8Args": [
-    "--ignore=E402"
-  ],
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.linting.pylintArgs": [
-    "--disable=F401, E722, C0116, C0115, W0613"
-  ],
-  "python.linting.mypyArgs": [
-    "--ignore-missing-imports",
-    "--follow-imports=silent",
-    "--show-column-numbers"
-  ],
-  "python.linting.ignorePatterns": [
-    ".vscode/*.py",
-    "**/site-packages/**/*.py"
-  ],
-  // coc-pyright
+  //=================================================================================================
+  // coc-pyright: https://github.com/neoclide/coc-python
   // "python.analysis.autoImportCompletions": true,
   // "python.analysis.autoSearchPaths": true,
   // "python.analysis.diagnosticMode": "workspace",
-  // "python.pythonPath": "/Users/alanjui/.pyenv/versions/3.9.1/bin/python",
-  // "python.venvPath": "/Users/alanjui/.pyenv/versions/3.9.1/envs",
-  // "python.venvFolders": ["venv-3.9.1", ".venv", "venv"],
+  // 設定 Python 解譯器的路徑
+  "python.pythonPath": "C:\\Users\\AlanJui\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  // "python.venvPath": "C:/Users/alanjui/.pyenv/versions/3.9.1/envs",
+  "python.venvFolders": [
+    ".venv",
+    "venv"
+  ],
+  //"python.formatting.provider": "autopep8",
+  // "python.formatting.autopep8Args": [
+  //   "--ignore=E402"
+  // ],
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "black",
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "88"
+  ],
+  // (選擇性) 自動儲存時格式化 Python
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python"
+  ],
+  // 啟用 pyright
+  "pyright.enable": true,
   "pyright.disableCompletion": false,
+  // (選擇性) 是否顯示診斷訊息
+  "pyright.disableDiagnostics": false,
+  // (選擇性) Type checking level
+  // "pyright.typeCheckingMode": "basic",
+  // "pyright.typeCheckingMode": "off",
+  "pyright.typeCheckingMode": "none",
+  // 視需求可關閉其他常見警告
+  // 注意：以下設定通常在 "python.analysis" 或 "pyright" namespace 之下
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none",
+    "reportUnusedVariable": "none",
+    "reportOptionalSubscript": "none",
+    "reportOptionalMemberAccess": "none",
+    "reportOptionalCall": "none"
+    // 視需求，可以再加其他想關閉的 rule
+  },
+  // 是否禁用 Pyright 診斷 (通常不建議全部關閉)
+  "pyright.disableDiagnostics": true,
+  // 若先前開啟了任何 linting，可以考慮關閉
+  // "python.linting.enabled": false,
+  // "python.linting.enabled": true,
+  // "python.linting.pylintEnabled": true,
+  // "python.linting.pylintArgs": [
+  //   "--disable=F401, E722, C0116, C0115, W0613"
+  // ],
+  // "python.linting.mypyArgs": [
+  //   "--ignore-missing-imports",
+  //   "--follow-imports=silent",
+  //   "--show-column-numbers"
+  // ],
+  // "python.linting.ignorePatterns": [
+  //   ".vscode/*.py",
+  //   "**/site-packages/**/*.py"
+  // ],
   "snippets.ultisnips.pythonPrompt": false
 }

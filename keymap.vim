@@ -158,8 +158,8 @@ nnoremap Y y$
 nnoremap H ^									" 游標移到行頭
 nnoremap L $									" 游標移到行尾
 
-nnoremap X d$									" Del characters from cursor to end of line
 
+nnoremap X d$									" Del characters from cursor to end of line
 
 " 搬移文字(Move Line)
 nnoremap <S-DOWN> :m .+1<CR>==
@@ -236,3 +236,21 @@ map <C-c> cp
 map <C-v> cv
 map <leader>y "*y
 map <leader>p "*p
+
+" Coc-nvim 快捷鍵設定
+
+" 跳至定義
+nmap <leader>gd <Plug>(coc-definition)
+
+" 查看型別定義
+nmap <leader>gy <Plug>(coc-type-definition)
+
+" 查看參考位置
+nmap <leader>gr <Plug>(coc-references)
+
+" 重新命名
+nmap <leader>rn <Plug>(coc-rename)
+
+" 顯示文件浮窗（當游標移至函式或變數上時）
+nnoremap <silent> K :call CocActionAsync('doHover')<CR>
+

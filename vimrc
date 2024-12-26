@@ -6,7 +6,7 @@
 "===========================================================
 
 scriptencoding utf-8
-set shell=$SHELL
+" set shell=$SHELL
 set nocompatible
 let g:mapleader = ","
 
@@ -133,3 +133,7 @@ set listchars=tab:▷▷,trail:.
 " set rtp+=/usr/local/opt/fzf
 
 set guifont=DroidSansM\ Nerd\ Font:h24"
+
+" 行號設定
+set number
+set relativenumber

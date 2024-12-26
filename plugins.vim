@@ -15,17 +15,18 @@ endif
 " 擴充套件安裝
 "============================================================
 
-
-call plug#begin('C:\Users\AlanJui\vimfiles\plugged')
+" 指定【外掛（Plugins）】安裝路徑
+"call plug#begin('C:\Users\AlanJui\vimfiles\plugged')
+call plug#begin($HOME . '/vimfiles/plugged')
 
 "------------------------------------------------------------
 " 編輯
 
 " Auto-complete (Intellisense Engine)
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Or build from source code by using yarn: https://yarnpkg.com
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
+" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 
 " System clipboard support
 Plug 'christoomey/vim-system-copy'
