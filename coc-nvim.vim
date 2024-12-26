@@ -14,6 +14,7 @@ let g:coc_global_extensions = [
 \ 'coc-syntax',
 \ 'coc-prettier',
 \ 'coc-snippets',
+\ 'coc-word',
 \ 'coc-tsserver',
 \ 'coc-tslint-plugin',
 \ 'coc-highlight',
@@ -28,7 +29,6 @@ let g:coc_global_extensions = [
 \ 'coc-xml',
 \ 'coc-yank',
 \ 'coc-pyright',
-\ 'coc-python',
 \ ]
 
 
