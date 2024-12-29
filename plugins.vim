@@ -19,144 +19,145 @@ endif
 "call plug#begin('C:\Users\AlanJui\vimfiles\plugged')
 call plug#begin($HOME . '/vimfiles/plugged')
 
-"------------------------------------------------------------
-" 編輯
+    "------------------------------------------------------------
+    " 編輯
 
-" Auto-complete (Intellisense Engine)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Auto-complete (Intellisense Engine)
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Or build from source code by using yarn: https://yarnpkg.com
-" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
+    " Or build from source code by using yarn: https://yarnpkg.com
+    " Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 
-" System clipboard support
-Plug 'christoomey/vim-system-copy'
+    " System clipboard support
+    Plug 'christoomey/vim-system-copy'
 
-" Snippets support
-Plug 'honza/vim-snippets'
-Plug 'https://github.com/andys8/vscode-jest-snippets.git'
+    " Snippets support
+    Plug 'honza/vim-snippets'
+    Plug 'https://github.com/andys8/vscode-jest-snippets.git'
 
-" Auto-pairs
-Plug 'jiangmiao/auto-pairs/'
-Plug 'tpope/vim-surround'
-Plug 'alvan/vim-closetag'
+    " Auto-pairs
+    Plug 'jiangmiao/auto-pairs/'
+    Plug 'tpope/vim-surround'
+    Plug 'alvan/vim-closetag'
 
-" Multiple cursor editting
-Plug 'terryma/vim-multiple-cursors'
+    " Multiple cursor editting
+    Plug 'terryma/vim-multiple-cursors'
 
-" Comment code
-Plug 'scrooloose/nerdcommenter'
+    " Comment code
+    Plug 'scrooloose/nerdcommenter'
 
-" Print function signatures in echo area
-Plug 'Shougo/echodoc.vim'
+    " Print function signatures in echo area
+    Plug 'Shougo/echodoc.vim'
 
-" The plug-in visualizes undo history and makes it easier to browse and switch between different undo branches.
-Plug 'mbbill/undotree'
+    " The plug-in visualizes undo history and makes it easier to browse and switch between different undo branches.
+    Plug 'mbbill/undotree'
 
-" Auto change html tags
-Plug 'AndrewRadev/tagalong.vim'
+    " Auto change html tags
+    Plug 'AndrewRadev/tagalong.vim'
 
-" Makes it easier to find and replace text through multiple files.
-Plug 'brooth/far.vim'
+    " Makes it easier to find and replace text through multiple files.
+    Plug 'brooth/far.vim'
 
-"------------------------------------------------------------
-" 程式排版 & 視覺導引
+    "------------------------------------------------------------
+    " 程式排版 & 視覺導引
 
-" Code folding
-Plug 'tmhedberg/SimpylFold'
+    " Code folding
+    Plug 'tmhedberg/SimpylFold'
 
-" Displaying thin vertical lines
-Plug 'Yggdroot/indentLine'
+    " Displaying thin vertical lines
+    Plug 'Yggdroot/indentLine'
 
-" === Syntax Highlighting === "
+    " === Syntax Highlighting === "
 
-" Syntax highlighting for nginx
-" Plug 'chr4/nginx.vim'
+    " Syntax highlighting for nginx
+    " Plug 'chr4/nginx.vim'
 
-" Syntax for json with comments
-" Plug 'elzr/vim-json'
-" Plug 'neoclide/jsonc.vim'
+    " Syntax for json with comments
+    " Plug 'elzr/vim-json'
+    " Plug 'neoclide/jsonc.vim'
 
-" Syntax highlighting for javascript libraries
-" Plug 'othree/javascript-libraries-syntax.vim'
+    " Syntax highlighting for javascript libraries
+    " Plug 'othree/javascript-libraries-syntax.vim'
 
+    "------------------------------------------------------------
+    " 檔案操作
 
-"------------------------------------------------------------
-" 檔案操作
+    Plug 'preservim/nerdtree'
 
-Plug 'preservim/nerdtree'
+    " Denite - Fuzzy finding, buffer management
+    " Plug 'Shougo/denite.nvim'
+    " Plug 'roxma/nvim-yarp'
+    " Plug 'roxma/vim-hug-neovim-rpc'
+    " Plug 'chemzqm/denite-git'
+    " Plug 'neoclide/coc-denite'
 
-" Denite - Fuzzy finding, buffer management
-" Plug 'Shougo/denite.nvim'
-" Plug 'roxma/nvim-yarp'
-" Plug 'roxma/vim-hug-neovim-rpc'
-" Plug 'chemzqm/denite-git'
-" Plug 'neoclide/coc-denite'
+    " File manage and exploration
+    " Plug 'francoiscabrol/ranger.vim'
+    " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    " Plug 'junegunn/fzf.vim'
 
-" File manage and exploration
-" Plug 'francoiscabrol/ranger.vim'
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
+    " === Git Plugins === "
+    " Enable git changes to be shown in sign column
+    Plug 'mhinz/vim-signify'
+    Plug 'tpope/vim-fugitive'
 
-" === Git Plugins === "
-" Enable git changes to be shown in sign column
-Plug 'mhinz/vim-signify'
-Plug 'tpope/vim-fugitive'
+    "------------------------------------------------------------
+    " 使用者操作介面
 
+    Plug 'liuchengxu/vim-which-key'
 
-"------------------------------------------------------------
-" 使用者操作介面
+    " Float Terminal
+    Plug 'voldikss/vim-floaterm'
 
-Plug 'liuchengxu/vim-which-key'
+    " Swap windows
+    Plug 'wesQ3/vim-windowswap'
 
-" Float Terminal
-Plug 'voldikss/vim-floaterm'
+    " Add file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'kristijanhusak/defx-icons'
 
-" Swap windows
-Plug 'wesQ3/vim-windowswap'
+    " Color Scheme: Support True Color
+    " Plug 'lifepillar/vim-solarized8'
+    " Plug 'morhetz/gruvbox'
 
-" Add file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline
-Plug 'ryanoasis/vim-devicons'
-Plug 'kristijanhusak/defx-icons'
+    " Customized vim status line
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
-" Color Scheme: Support True Color
-" Plug 'lifepillar/vim-solarized8'
-" Plug 'morhetz/gruvbox'
+    Plug 'itchyny/lightline.vim'
 
-" Customized vim status line
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+    "------------------------------------------------------------
+    " 其它
 
-Plug 'itchyny/lightline.vim'
+    " Live Server
+    " Plug 'turbio/bracey.vim'
+    Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
-"------------------------------------------------------------
-" 其它
+    " PlantUML
+    Plug 'aklt/plantuml-syntax'
+    Plug 'tyru/open-browser.vim'
+    Plug 'weirongxu/plantuml-previewer.vim'
 
-" Live Server
-" Plug 'turbio/bracey.vim'
-Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+    "------------------------------------------------------------
+    " Markdown Preview
+    " If you don't have nodejs and yarn
+    " use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
+    " see: https://github.com/iamcco/markdown-preview.nvim/issues/50
+    " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
-" PlantUML
-Plug 'aklt/plantuml-syntax'
-Plug 'tyru/open-browser.vim'
-Plug 'weirongxu/plantuml-previewer.vim'
+    " If you have nodejs and yarn
+    " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-"------------------------------------------------------------
-" Markdown Preview
-" If you don't have nodejs and yarn
-" use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
-" see: https://github.com/iamcco/markdown-preview.nvim/issues/50
-" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    " Markdown Preview
+    Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 
-" If you have nodejs and yarn
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    " Markdown syntax highlighting and filetype plugins for markdown
+    Plug 'tpope/vim-markdown'
+    Plug 'tpope/vim-commentary'
 
-" Markdown Preview
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
-
-" Markdown syntax highlighting and filetype plugins for markdown
-Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-commentary'
-
+    "------------------------------------------------------------
+    " Python Tool
+    Plug 'codingismycraft/VimMyTools'
 call plug#end()
 
 

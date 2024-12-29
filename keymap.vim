@@ -189,7 +189,10 @@ vnoremap <S-UP> :m '<-2<CR>gv=gv
 " inoremap <C-a> <Home>
 " inoremap <C-e> <End>
 " inoremap <C-d> <Delete>
-
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 "--------------------------------------------------------------
 " 跳脫 Visual Mode
